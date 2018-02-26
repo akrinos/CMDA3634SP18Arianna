@@ -6,16 +6,16 @@
 #include "functions.h"
 
 // practice using things
-int main(int argc, char** argv) {
-	unsigned int num1 = 56;
-	unsigned int num2 = 74;
-	unsigned int num3 = 111;
-	printf("%d\n", modprod(num1, num2, num3));
-	printf("%d\n", modExp(num1, num2, num3)); 
-	printf("%d\n", isProbablyPrime(4));
-	printf("%d\n", isProbablyPrime(17));
-
-}
+//int main(int argc, char** argv) {
+//	unsigned int num1 = 56;
+//	unsigned int num2 = 74;
+//	unsigned int num3 = 111;
+//	printf("%d\n", modprod(num1, num2, num3));
+//	printf("%d\n", modExp(num1, num2, num3)); 
+//	printf("%d\n", isProbablyPrime(4));
+//	printf("%d\n", isProbablyPrime(17));
+//
+//}
 
 //compute a*b mod p safely
 unsigned int modprod(unsigned int a, unsigned int b, unsigned int p) {
@@ -180,6 +180,17 @@ unsigned int isProbablyPrime(unsigned int N) {
 }
 
 //Finds a generator of Z_p using the assumption that p=2*q+1
+  /* Q3.3: complete this function and use the fact that p=2*q+1 to quickly find a generator *//* quickly find a generator */
 unsigned int findGenerator(unsigned int p) {
-  /* Q3.3: complete this function and use the fact that p=2*q+1 to quickly find a generator */
+        // 2 and q are the only factors of p-1 so we just check that 2 and q are not g^r == 1
+        int q = (p - 1) / 2;
+        for (unsigned int i = 1; i < p; i++) {
+                int res1 = (int) pow(i, 1) % p;
+                int res2 = (int) pow(i, q) % p;
+                if (res1 != 1 && res2 != 1) {
+                        return i;
+                }
+        }
+        return 0;
 }
+
