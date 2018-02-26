@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <stdbool.h>
 
 #include "functions.h"
 
@@ -11,6 +12,9 @@ int main(int argc, char** argv) {
 	unsigned int num3 = 111;
 	printf("%d\n", modprod(num1, num2, num3));
 	printf("%d\n", modExp(num1, num2, num3)); 
+	printf("%d\n", isProbablyPrime(4));
+	printf("%d\n", isProbablyPrime(17));
+
 }
 
 //compute a*b mod p safely
@@ -78,7 +82,7 @@ unsigned int modExp(unsigned int a, unsigned int b, unsigned int p) {
 	for (int i = 0; i < n; i++) {
 		if (bvect[i] == 1) {
 			aExpb = modprod(aExpb, z, p);
-			printf("%d\n", i);
+			//printf("%d\n", i);
 		}
 		z = modprod(z,z,p);
 	}
@@ -136,9 +140,41 @@ unsigned int isProbablyPrime(unsigned int N) {
   //if we're testing a large number switch to Miller-Rabin primality test
   /* Q2.1: Complete this part of the isProbablyPrime function using the Miller-Rabin pseudo-code */
   unsigned int r,d;
+	int tempN = N - 1;
+	r = 0;
+	int divs = 1; 
+	while (tempN > 0) {
+		if ((N / divs) % 2 != 0) {	
+			tempN = 0;
+			d = (N / divs) % 2; 
+		} else {
+			divs *= 2; 
+			r++;
+		}  
+	}
+	
 
   for (unsigned int n=0;n<NsmallPrimes;n++) {
-  
+  	unsigned int a = randXbitInt(N);
+	int x = modExp(a,d,N);
+	if (x == 1 || x == N - 1) {
+		continue;	
+	}
+	bool continueIt = false; 
+	for (int i = 1; i < r - 1; i++) {
+		x = modprod(x, x, N);
+		if (x == 1) {
+			return 0; //false
+		} 
+		if (x == N - 1) {
+			continueIt = true; // continues to next k 
+			break; 
+		}
+	}
+	if (continueIt) {
+		continue;
+	}
+	return 0; //false
   }
   return 1; //true
 }
