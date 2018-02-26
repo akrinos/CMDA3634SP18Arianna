@@ -9,7 +9,8 @@ int main(int argc, char** argv) {
 	unsigned int num1 = 56;
 	unsigned int num2 = 74;
 	unsigned int num3 = 111;
-	printf("%d\n", modprod(num1, num2, num3)); 
+	printf("%d\n", modprod(num1, num2, num3));
+	printf("%d\n", modExp(num1, num2, num3)); 
 }
 
 //compute a*b mod p safely
@@ -47,9 +48,41 @@ unsigned int modprod(unsigned int a, unsigned int b, unsigned int p) {
 	return ab; 
 }
 
+
 //compute a^b mod p safely
 unsigned int modExp(unsigned int a, unsigned int b, unsigned int p) {
   /* Q1.3: Complete this function */
+	int z = a;
+	int aExpb = 1;
+	int n = 0;
+	int bholder = b;
+	while (bholder != 0) {
+		bholder /= 2;
+		n++;
+	}
+	bholder = b;	
+	int bvect[n];
+	int t;
+	int curr = pow(2, n-1);
+	//printf("%d\n", curr);
+	for (t = n-1; t >= 0; t--) {
+		if (bholder / curr != 0) {
+			bvect[t] = 1;
+			bholder -= curr;
+		} else {
+			bvect[t] = 0; 
+		}
+		curr /= 2;
+		//printf("the %d val is %d\n", t, bvect[t]); 
+	}
+	for (int i = 0; i < n; i++) {
+		if (bvect[i] == 1) {
+			aExpb = modprod(aExpb, z, p);
+			printf("%d\n", i);
+		}
+		z = modprod(z,z,p);
+	}
+	return aExpb;	
 }
 
 //returns either 0 or 1 randomly
