@@ -7,13 +7,13 @@
 
 // practice using things
 //int main(int argc, char** argv) {
-//	unsigned int num1 = 56;
-//	unsigned int num2 = 74;
+//	unsigned int num1 = 0x444446;
+//	unsigned int num2 = 0x744443;
 //	unsigned int num3 = 111;
-//	printf("%d\n", modprod(num1, num2, num3));
+//	printf("%d\n", modprod(num1, num2, num3));	
 //	printf("%d\n", modExp(num1, num2, num3)); 
-//	printf("%d\n", isProbablyPrime(4));
-//	printf("%d\n", isProbablyPrime(17));
+//	printf("%d\n", isProbablyPrime(num1*4443));
+//	printf("%d\n", isProbablyPrime(num2));
 //
 //}
 
@@ -26,31 +26,34 @@ unsigned int modprod(unsigned int a, unsigned int b, unsigned int p) {
 		bholder = bholder / 2;
 		n++; 
 	}
-	// NOTE: this could be done easily by repeatedly dividing
+	//printf("%d and %d \n", n, b);
+	// NOTE: this can be done easily by repeatedly dividing
 	// b by two, but I originally implemented the b vector
-	 
-	bholder = b;
-	int bvect[n];
-	int t;
-	int curr = pow(2, n-1);
+	// so I left it 
+ 
+	//bholder = b;
+	//int bvect[n];
+	//int t;
+	//int curr = pow(2, n-1);
 	//printf("%d\n", curr);
-	for (t = n-1; t >= 0; t--) {
-		if (bholder / curr != 0) {
-			bvect[t] = 1;
-			bholder -= curr;
-		} else {
-			bvect[t] = 0; 
-		}
-		curr /= 2;
+	//for (t = n-1; t >= 0; t--) {
+	//	if (bholder / curr != 0) {
+	//		bvect[t] = 1;
+	//		bholder -= curr;
+	//	} else {
+	//		bvect[t] = 0; 
+	//	}
+	//	curr /= 2;
 		//printf("the %d val is %d\n", t, bvect[t]); 
-	}
+	//}
 	int za = a;
 	int ab = 0;
 	for (int i = 0; i < n; i++) {
-		if (bvect[i] == 1) {
-			ab = (ab + za*bvect[i]) % p; 
+		if (b % 2 == 1) {
+			ab = (ab + za) % p; 
 		}
 		za = (2 * za) % p; 
+		b /= 2;
 	}
 	return ab; 
 }
@@ -67,30 +70,31 @@ unsigned int modExp(unsigned int a, unsigned int b, unsigned int p) {
 		bholder /= 2;
 		n++;
 	}
-	bholder = b;	
-	int bvect[n];
-	int t;
-	int curr = pow(2, n-1);
+	//bholder = b;	
+	//int bvect[n];
+	//int t;
+	//int curr = pow(2, n-1);
 	//printf("%d\n", curr);
 
 	// NOTE: this could be done easily by repeatedly dividing
 	// b by two, but I originally implemented the b vector
-	for (t = n-1; t >= 0; t--) {
-		if (bholder / curr != 0) {
-			bvect[t] = 1;
-			bholder -= curr;
-		} else {
-			bvect[t] = 0; 
-		}
-		curr /= 2;
-		//printf("the %d val is %d\n", t, bvect[t]); 
-	}
+	//for (t = n-1; t >= 0; t--) {
+	//	if (bholder / curr != 0) {
+	//		bvect[t] = 1;
+	//		bholder -= curr;
+	//	} else {
+	//		bvect[t] = 0; 
+	//	}
+	//	curr /= 2;
+	//	//printf("the %d val is %d\n", t, bvect[t]); 
+	//}
 	for (int i = 0; i < n; i++) {
-		if (bvect[i] == 1) {
+		if (b % 2 == 1) {
 			aExpb = modprod(aExpb, z, p);
 			//printf("%d\n", i);
 		}
 		z = modprod(z,z,p);
+		b /= 2;
 	}
 	return aExpb;	
 }
@@ -111,9 +115,8 @@ unsigned int randXbitInt(unsigned int n) {
 
 //tests for primality and return 1 if N is probably prime and 0 if N is composite
 unsigned int isProbablyPrime(unsigned int N) {
-
+  if (N==0) return 0;
   if (N%2==2) return 0; //not interested in even numbers (including 2)
-
   unsigned int NsmallPrimes = 168;
   unsigned int smallPrimeList[168] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 
                                 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 
@@ -145,15 +148,21 @@ unsigned int isProbablyPrime(unsigned int N) {
 
   //if we're testing a large number switch to Miller-Rabin primality test
   /* Q2.1: Complete this part of the isProbablyPrime function using the Miller-Rabin pseudo-code */
-  unsigned int r,d;
+  double r,d;
+	//printf("N-1 is %d\n", N-1);
 	int tempN = N - 1;
 	r = 0;
 	int divs = 1; 
 	while (tempN > 0) {
-		if ((N / divs) % 2 != 0) {	
+		if (tempN == 0) {
+			d = 1;
+		}
+		else if (tempN % 2 != 0) {	
+			//tempN = 0;
+			d = tempN;
 			tempN = 0;
-			d = (N / divs) % 2; 
 		} else {
+			tempN /= 2; 
 			divs *= 2; 
 			r++;
 		}  
@@ -161,8 +170,8 @@ unsigned int isProbablyPrime(unsigned int N) {
 	
 
   for (unsigned int n=0;n<NsmallPrimes;n++) {
-  	unsigned int a = randXbitInt(N);
-	int x = modExp(a,d,N);
+  	//unsigned int a = randXbitInt(N);
+	int x = modExp(smallPrimeList[n],d,N);
 	if (x == 1 || x == N - 1) {
 		continue;	
 	}

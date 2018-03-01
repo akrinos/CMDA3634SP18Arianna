@@ -15,7 +15,7 @@ LIBS  = -lm
 CC =  gcc
 
 $(OBJDIR)/%.o:$(SOURCEDIR)/%.c $(DEPS)
-	$(CC) $(FLAGS) -o $@ $(LIBS) -c $<
+	$(CC) $(FLAGS) -o $@ $(LIBS) -c $< -g
 
 all: main
 

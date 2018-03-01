@@ -43,15 +43,12 @@ int main (int argc, char **argv) {
   /* Q3.2: Use isProbablyPrime and randomXbitInt to find a new random n-bit prime number 
      which satisfies p=2*q+1 where q is also prime */
   int q;
-	printf("%d problem\n", (int) isProbablyPrime(15));
+	//printf("%d problem\n", (int) isProbablyPrime(15));
 	curr = randXbitInt(n);
-	while ((!isProbablyPrime(curr) || !isProbablyPrime(2 * curr + 1)) && (curr - 1) % 2 == 0) { 
-//|| ((curr * 2) + 1) < pow(2, n-1) || ((curr * 2) + 1) > pow(2,n) ) {
-		curr = randXbitInt(n);
+	while ((!isProbablyPrime(curr) || !isProbablyPrime(2 * curr + 1)) || (curr - 1) % 2 != 0) {
+		curr = randXbitInt(n); // try again
 		//printf("%d and %d and %d\n", curr, n, (2*curr + 1));
 	}
-	//q = curr;
-	//p = 2*curr + 1;
 	q = 2 * curr + 1;
 	p = curr;
 
