@@ -43,13 +43,17 @@ int main (int argc, char **argv) {
   /* Q3.2: Use isProbablyPrime and randomXbitInt to find a new random n-bit prime number 
      which satisfies p=2*q+1 where q is also prime */
   int q;
+	printf("%d problem\n", (int) isProbablyPrime(15));
 	curr = randXbitInt(n);
-	while (!isProbablyPrime(curr) && ((curr * 2) + 1) >= pow(2, n-1) && ((curr * 2) + 1) <=pow(2,n) ) {
+	while ((!isProbablyPrime(curr) || !isProbablyPrime(2 * curr + 1)) && (curr - 1) % 2 == 0) { 
+//|| ((curr * 2) + 1) < pow(2, n-1) || ((curr * 2) + 1) > pow(2,n) ) {
 		curr = randXbitInt(n);
+		//printf("%d and %d and %d\n", curr, n, (2*curr + 1));
 	}
-	q = curr;
-	p = 2*curr + 1;
-	
+	//q = curr;
+	//p = 2*curr + 1;
+	q = 2 * curr + 1;
+	p = curr;
 
 	printf("p = %u is probably prime and equals 2*q + 1. q= %u and is also probably prime.\n", p, q);  
 
@@ -58,17 +62,21 @@ int main (int argc, char **argv) {
 
 	printf("g = %u is a generator of Z_%u \n", g, p);  
 	/* Bonus: continuation of ElGamal */
-	int randomExp = rand() % (g + 1 - 1) + 1; 
+	int randomExp = rand() % ((g + 1 - 1) + 1); 
+	//printf("we're here\n");
 	unsigned int h = pow(g, randomExp); 
 	printf("x is %d, g is %d, and h is %d. Shh, x is now a secret!\n", randomExp, g, h);
 	// now we want to find x such that h = g^x; possible values of x are 1 through g
 	bool found = false;
+	double toCheck = g;
+	//double toCheck = pow(g, i);
 	for (int i = 1; i <= g; i++) {
-		if (h == pow(g, i)) {
+		if (h == toCheck) {
 			printf("We found the x, it's %d\n",i);
 			found = true; 
 			break; 
 		}
+		toCheck *= g;
 	}	 
 	if (!found) {
 		printf("We weren't able to find the x.\n");
