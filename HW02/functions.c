@@ -25,7 +25,10 @@ unsigned int modprod(unsigned int a, unsigned int b, unsigned int p) {
 	while (bholder != 0) {
 		bholder = bholder / 2;
 		n++; 
-	} 
+	}
+	// NOTE: this could be done easily by repeatedly dividing
+	// b by two, but I originally implemented the b vector
+	 
 	bholder = b;
 	int bvect[n];
 	int t;
@@ -69,6 +72,9 @@ unsigned int modExp(unsigned int a, unsigned int b, unsigned int p) {
 	int t;
 	int curr = pow(2, n-1);
 	//printf("%d\n", curr);
+
+	// NOTE: this could be done easily by repeatedly dividing
+	// b by two, but I originally implemented the b vector
 	for (t = n-1; t >= 0; t--) {
 		if (bholder / curr != 0) {
 			bvect[t] = 1;
