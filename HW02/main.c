@@ -59,15 +59,17 @@ int main (int argc, char **argv) {
 
 	printf("g = %u is a generator of Z_%u \n", g, p);  
 	/* Bonus: continuation of ElGamal */
-	int randomExp = rand() % ((g + 1 - 1) + 1); 
-	//printf("we're here\n");
-	unsigned int h = pow(g, randomExp); 
-	printf("x is %d, g is %d, and h is %d. Shh, x is now a secret!\n", randomExp, g, h);
+	// NOTE: After modifying/improving the code, this computation could
+	// be performed for large numbers as well with minimal hang, but
+	// the values turned out to be incorrect (infinite vals). 
+	int randomExp = rand() % ((p + 1 - 1) + 1); 
+	double h = pow(g, randomExp); 
+	printf("x is %d, g is %d, and h is %f. Shh, x is now a secret!\n", randomExp, g, h);
 	// now we want to find x such that h = g^x; possible values of x are 1 through g
 	bool found = false;
 	double toCheck = g;
 	//double toCheck = pow(g, i);
-	for (int i = 1; i <= g; i++) {
+	for (int i = 1; i <= p; i++) {
 		if (h == toCheck) {
 			printf("We found the x, it's %d\n",i);
 			found = true; 

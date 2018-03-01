@@ -200,7 +200,7 @@ unsigned int findGenerator(unsigned int p) {
         // 2 and q are the only factors of p-1 so we just check that 2 and q are not g^r == 1
         int q = (p - 1) / 2;
         for (unsigned int i = 1; i < p; i++) {
-                int res1 = (int) pow(i, 1) % p;
+                int res1 = (int) pow(i, 2) % p;
                 int res2 = (int) pow(i, q) % p;
                 if (res1 != 1 && res2 != 1) {
                         return i;
