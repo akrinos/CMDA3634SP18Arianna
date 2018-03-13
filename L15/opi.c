@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
   // add OpenMP API code to set number of threads here
   int Nthreads = atoi(argv[1]);
   omp_set_num_threads(Nthreads);
-  printf("Num threads is %d and argv is %s .\n", Nthreads, *argv);
+  printf("Num threads is %d.\n", Nthreads);
   struct drand48_data *drandData; 
   drandData = (struct drand48_data*) malloc(Nthreads*sizeof(struct drand48_data));
 
@@ -19,24 +19,27 @@ int main(int argc, char **argv) {
   //      one entry in drandData using srand48_r and seed based on thread number
   #pragma omp parallel
 	{
-		long int seed = omp_get_thread_num();
-	  srand48_r(seed, drandData+0);
-
+	  long int seed = omp_get_thread_num();
+	  int threadNo = omp_get_thread_num();
+	  srand48_r(seed, drandData+threadNo);
+	}
 	  long long int Ntrials = 10000000;
 
 
  	 //need running tallies
  	 long long int Ntotal=0;
  	 long long int Ncircle=0;
-		
-	 #pragma omp parallel for reduction(+:Ncircle) 
+
+	double walltime1 = omp_get_wtime();
+	 #pragma omp parallel for reduction(+:Ncircle) reduction(+:Ntotal)
  	 for (long long int n=0; n<Ntrials; n++) {
-  	 double rand1;
+	 int threadNo = omp_get_thread_num();
+	 double rand1;
    	 double rand2;
 
    	 //gererate two random numbers (use the thread id to offset drandData)
-   	 drand48_r(drandData+0, &rand1);
-   	 drand48_r(drandData+0, &rand2);
+   	 drand48_r(drandData+threadNo, &rand1);
+   	 drand48_r(drandData+threadNo, &rand2);
     
   	 double x = -1 + 2*rand1; //shift to [-1,1]
    	 double y = -1 + 2*rand2;
@@ -56,9 +59,9 @@ int main(int argc, char **argv) {
 
   //	free(drandData);
 		double walltime = omp_get_wtime();
- 		printf("Our program took %f seconds from past to run.\n", walltime);
-  }
-
+ 		printf("Our program took %f seconds from past to run.\n", walltime-walltime1);
+ 
+ free(drandData);
  // printf("Our program took %f seconds from past to run.\n", walltime);
   return 0;
 }
