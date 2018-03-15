@@ -70,7 +70,7 @@ void  mandelbrot(int Nre, int Nim, complex_t cmin, complex_t cmax, float *count)
   double di = (cmax.i-cmin.i)/(Nim-1);;
 
   // Q2c: add a compiler directive to split the outer for loop amongst threads here
-  #pragma omp parallel for
+  #pragma omp parallel for private(c)
   for(n=0;n<Nim;++n){
     for(m=0;m<Nre;++m){
       c.r = cmin.r + dr*m; // make this stuff private 
@@ -94,6 +94,7 @@ int main(int argc, char **argv){
   int Nthreads = atoi(argv[3]);
 
   // Q2b: set the number of OpenMP threads to be Nthreads here:
+  omp_set_num_threads(Nthreads);  
 
   // storage for the iteration counts
   float *count = (float*) malloc(Nre*Nim*sizeof(float));
@@ -111,13 +112,13 @@ int main(int argc, char **argv){
   cmax.i = centIm + 0.5*diam;
 
   // Q2d: complete this to read time before calling mandelbrot with OpenMP API wall clock time
-  double start;
+  double start = omp_get_wtime();
 
   // compute mandelbrot set
   mandelbrot(Nre, Nim, cmin, cmax, count); 
   
   // Q2d: complete this to read time after calling mandelbrot using OpenMP wall clock time
-  double end;
+  double end = omp_get_wtime();
   
   // print elapsed time
   printf("elapsed = %g\n", end-start);
