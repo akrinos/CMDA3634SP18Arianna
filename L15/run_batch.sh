@@ -13,12 +13,12 @@ module load gcc
 
 make
 
-./main 1
-./main 2
-./main 4
-./main 8
-./main 16
-./main 20
-./main 24
-./main 28
+"./main 1"
+"./main 2"
+"./main 4"
+"./main 8"
+"./main 16"
+"./main 20"
+"./main 24"
+"./main 28"
 
