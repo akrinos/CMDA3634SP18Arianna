@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <stdbool.h>
 
 #include "functions.h"
 
@@ -121,9 +122,26 @@ unsigned int findGenerator(unsigned int p) {
 
 void setupElGamal(unsigned int n, unsigned int *p, unsigned int *g, 
                                   unsigned int *h, unsigned int *x) {
-
-  /* Setup an ElGamal cryptographic system */
-  
+  /* Q1.1 Setup an ElGamal cryptographic system */
+  unsigned int tP = randXbitInt(n); 
+  bool gotIt = false; 
+  if ((tP - 1) %2  == 0 && isProbablyPrime((tP - 1) / 2)) {
+	gotIt = true;
+  }
+  while (!isProbablyPrime(tP) || !gotIt) {
+	tP = randXbitInt(n);
+	if ((tP - 1) %2 == 0 && isProbablyPrime((tP - 1) / 2)) {
+		gotIt = true;
+	}
+  }
+  *p = tP; 
+  unsigned int tG = (findGenerator(*p));
+  *g = tG;
+  unsigned int tX = (randXbitInt(32) % *p);
+  *x = tX;
+  printf("%d x is and %d p is \n", *x, *p);
+  unsigned int tH = (modExp(*g, *x, *p)); 
+  *h = tH;
   printf("ElGamal Setup successful.\n");
   printf("p = %u. \n", *p);  
   printf("g = %u is a generator of Z_%u \n", *g, *p);  
@@ -135,11 +153,22 @@ void setupElGamal(unsigned int n, unsigned int *p, unsigned int *g,
 void ElGamalEncrypt(unsigned int *m, unsigned int *a, 
                     unsigned int p, unsigned int g, unsigned int h) {
 
-  /* implement the encryption routine for an ElGamal cryptographic system */
+  /* Q2.1 Implement the encryption routine for an ElGamal cryptographic system */
+  unsigned int y = (randXbitInt(32) % p);
+  unsigned int tA = modExp(g, y, p);
+  unsigned int tS = modExp(h, y, p);
+  unsigned int tM = modprod(*m, tS, p);
+  m = &tM;
+  a = &tA;
+
 }
 
 void ElGamalDecrypt(unsigned int *m, unsigned int a, 
                     unsigned int p, unsigned int x) {
 
-  /* implement the decryption routine for an ElGamal cryptographic system */
+  /* Q2.2 Implement the decryption routine for an ElGamal cryptographic system */
+  unsigned int tS = modExp(a, x, p);
+  unsigned int sneg = modExp(tS, p - 2, p);
+  unsigned int mres = modprod(*m, sneg, p);
+  m = &mres;
 }
