@@ -29,9 +29,9 @@ int main (int argc, char **argv) {
     //declare storage for an ElGamal cryptosytem
     unsigned int p, g, h, x;
   if (rank == 0) {
-    printf("Enter a number of bits: "); fflush(stdout);
-    char status = scanf("%u",&n);
-
+    //printf("Enter a number of bits: "); fflush(stdout);
+    //char status = scanf("%u",&n);
+    n = 10;
     //make sure the input makes sense
     if ((n<3)||(n>31)) {//Updated bounds. 2 is no good, 31 is actually ok
       printf("Unsupported bit size.\n");

@@ -129,6 +129,7 @@ void setupElGamal(unsigned int n, unsigned int *p, unsigned int *g,
 	gotIt = true;
   }
   while (!isProbablyPrime(tP) || !gotIt) {
+	gotIt = false;
 	tP = randXbitInt(n);
 	if ((tP - 1) %2 == 0 && isProbablyPrime((tP - 1) / 2)) {
 		gotIt = true;
