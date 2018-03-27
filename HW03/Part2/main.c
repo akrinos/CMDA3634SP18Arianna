@@ -7,7 +7,6 @@
 #include "functions.h"
 
 int main (int argc, char **argv) {
-
   MPI_Init(&argc,&argv);
 
   int rank, size;
@@ -31,7 +30,7 @@ int main (int argc, char **argv) {
   if (rank == 0) {
     //printf("Enter a number of bits: "); fflush(stdout);
     //char status = scanf("%u",&n);
-    n = 10;
+    n = 20;
     //make sure the input makes sense
     if ((n<3)||(n>31)) {//Updated bounds. 2 is no good, 31 is actually ok
       printf("Unsupported bit size.\n");
@@ -47,19 +46,10 @@ int main (int argc, char **argv) {
     setupElGamal(n,&p,&g,&h,&x);
     int tag = 1;
   }
-//    for (int i = 0; i < size; i++) {
-      MPI_Bcast(&p, 1, MPI_UNSIGNED, 0, MPI_COMM_WORLD);
-      MPI_Bcast(&g, 1, MPI_UNSIGNED, 0, MPI_COMM_WORLD);
-      MPI_Bcast(&h, 1, MPI_UNSIGNED, 0, MPI_COMM_WORLD);
-      MPI_Bcast(&x, 1, MPI_UNSIGNED, 0, MPI_COMM_WORLD);
- //   }
- // } else {
- //   MPI_Recv(&g, 1, MPI_UNSIGNED, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
- //   MPI_Recv(&p, 1, MPI_UNSIGNED, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
- //   MPI_Recv(&h, 1, MPI_UNSIGNED, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
- //   MPI_Recv(&x, 1, MPI_UNSIGNED, 0, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
- //   printf("we're done receiving\n");
- //}
+  MPI_Bcast(&p, 1, MPI_UNSIGNED, 0, MPI_COMM_WORLD);
+  MPI_Bcast(&g, 1, MPI_UNSIGNED, 0, MPI_COMM_WORLD);
+  MPI_Bcast(&h, 1, MPI_UNSIGNED, 0, MPI_COMM_WORLD);
+  MPI_Bcast(&x, 1, MPI_UNSIGNED, 0, MPI_COMM_WORLD);
 
 
   //Suppose we don't know the secret key. Use all the ranks to try and find it in parallel
@@ -75,6 +65,7 @@ int main (int argc, char **argv) {
   start = partition * rank; 
   end = start + partition; //start + N;
   // printf("we have start %d and end %d and x = %u and g = %u and p = %u, h = %u \n", start, end, x, g, p, h);
+  int sizeInterval = (end - start) / 5;
   if ((rank == size)) {
 	end = N; // go to p-2 in the loop below 
   }
@@ -84,10 +75,24 @@ int main (int argc, char **argv) {
   if (rank == 0) {
 	starttime = MPI_Wtime();
   }
+  int found = 0;
+  int result = -1; 
   //loop through the values from 'start' to 'end'
   for (unsigned int i=start;i<end;i++) {
-    if (modExp(g,i,p)==h)//+1,p)==h)
+    int res = modExp(g, i, p); 
+    if (res==h) { //+1,p)==h) {
       printf("Secret key found! x = %u \n", i);
+      found = 1;
+      result = i; 
+    }
+    /*if (i % 5 == 0) {
+	int final = 0;
+	MPI_Allreduce(&found, &final, 1, MPI_INT, MPI_BOR, MPI_COMM_WORLD);
+	if (final == 1) {
+		MPI_Barrier(MPI_COMM_WORLD);
+		break;
+	}
+    } */
   }
 
   double endtime;

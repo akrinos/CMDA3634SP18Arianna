@@ -1,0 +1,241 @@
+make: Nothing to be done for `all'.
+
+16 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 5 is a generator of Z_23 
+Secret key: x = 16 
+h = g^x = 3
+
+Using 1 processes to find the secret key...
+Secret key found! x = 16 
+starting at 1522180909.826115
+ending at 1522180909.826136
+Our runtime is 0.000021 and throughput is 989667.235955. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 16
+
+Using 2 processes to find the secret key...
+Secret key found! x = 4 
+starting at 1522180910.356370
+ending at 1522180910.356391
+Our runtime is 0.000021 and throughput is 1000913.454545. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 16
+
+Using 3 processes to find the secret key...
+Secret key found! x = 4 
+starting at 1522180911.055087
+ending at 1522180911.055114
+Our runtime is 0.000027 and throughput is 779472.424779. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 16
+
+Using 4 processes to find the secret key...
+Secret key found! x = 4 
+starting at 1522180911.590082
+ending at 1522180911.590106
+Our runtime is 0.000024 and throughput is 872083.009901. 
+
+6 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 6 
+h = g^x = 18
+
+Using 5 processes to find the secret key...
+Secret key found! x = 6 
+starting at 1522180912.242899
+ending at 1522180912.242957
+Our runtime is 0.000058 and throughput is 360985.180328. 
+
+6 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 6 
+h = g^x = 18
+
+Using 6 processes to find the secret key...
+Secret key found! x = 6 
+starting at 1522180912.913878
+ending at 1522180912.913910
+Our runtime is 0.000032 and throughput is 657316.298507. 
+
+6 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 6 
+h = g^x = 18
+
+Using 7 processes to find the secret key...
+Secret key found! x = 6 
+starting at 1522180913.755062
+ending at 1522180913.755104
+Our runtime is 0.000042 and throughput is 500456.727273. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 16
+
+Using 8 processes to find the secret key...
+Secret key found! x = 4 
+starting at 1522180914.360815
+ending at 1522180914.360852
+Our runtime is 0.000037 and throughput is 568260.541935. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 16
+
+Using 9 processes to find the secret key...
+Secret key found! x = 4 
+starting at 1522180915.172611
+ending at 1522180915.172673
+Our runtime is 0.000062 and throughput is 338770.707692. 
+
+16 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 5 is a generator of Z_23 
+Secret key: x = 16 
+h = g^x = 3
+
+Using 10 processes to find the secret key...
+Secret key found! x = 16 
+starting at 1522180915.869465
+ending at 1522180915.869499
+Our runtime is 0.000034 and throughput is 620284.394366. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 16
+
+Using 11 processes to find the secret key...
+Secret key found! x = 4 
+starting at 1522180916.863030
+ending at 1522180916.863079
+Our runtime is 0.000049 and throughput is 427574.679612. 
+
+6 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 6 
+h = g^x = 18
+
+Using 12 processes to find the secret key...
+Secret key found! x = 6 
+starting at 1522180917.721109
+ending at 1522180917.721156
+Our runtime is 0.000047 and throughput is 447108.548223. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 16
+
+Using 13 processes to find the secret key...
+Secret key found! x = 4 
+starting at 1522180918.541636
+ending at 1522180918.541719
+Our runtime is 0.000083 and throughput is 253104.551724. 
+
+6 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 6 
+h = g^x = 18
+
+Using 14 processes to find the secret key...
+Secret key found! x = 6 
+starting at 1522180919.579496
+ending at 1522180919.579609
+Our runtime is 0.000113 and throughput is 185823.594937. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 16
+
+Using 15 processes to find the secret key...
+Secret key found! x = 4 
+starting at 1522180920.663421
+ending at 1522180920.663545
+Our runtime is 0.000124 and throughput is 169385.353846. 
+
+12 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 5 is a generator of Z_23 
+Secret key: x = 12 
+h = g^x = 18
+
+Using 16 processes to find the secret key...
+Secret key found! x = 12 
+starting at 1522180921.663611
+ending at 1522180921.671743
+Our runtime is 0.008132 and throughput is 2582.396622. 
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 17 slots 
+that were requested by the application:
+  main
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 18 slots 
+that were requested by the application:
+  main
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 19 slots 
+that were requested by the application:
+  main
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 20 slots 
+that were requested by the application:
+  main
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------

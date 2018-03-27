@@ -1,0 +1,361 @@
+make: Nothing to be done for `all'.
+
+277 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 119 is a generator of Z_863 
+Secret key: x = 277 
+h = g^x = 416
+
+Using 1 processes to find the secret key...
+we stopped one
+starting at 1522126904.674105
+ending at 1522126904.674120
+Our runtime is 0.000015 and throughput is 57322154.666667. 
+
+277 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 119 is a generator of Z_863 
+Secret key: x = 277 
+h = g^x = 416
+
+Using 2 processes to find the secret key...
+we stopped one
+we stopped one
+starting at 1522126905.018895
+ending at 1522126905.018914
+Our runtime is 0.000019 and throughput is 45141196.800000. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 3 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126905.440863
+ending at 1522126905.440907
+Our runtime is 0.000044 and throughput is 20064643.459459. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 4 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126905.845932
+ending at 1522126905.846037
+Our runtime is 0.000105 and throughput is 8436270.545455. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 5 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126906.293788
+ending at 1522126906.293867
+Our runtime is 0.000079 and throughput is 11180599.518072. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 6 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126906.781516
+ending at 1522126906.781556
+Our runtime is 0.000040 and throughput is 22227299.640719. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 7 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126907.318747
+ending at 1522126907.318893
+Our runtime is 0.000146 and throughput is 6065292.549020. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 8 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126907.907686
+ending at 1522126907.907832
+Our runtime is 0.000146 and throughput is 6065292.549020. 
+
+277 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 119 is a generator of Z_863 
+Secret key: x = 277 
+h = g^x = 416
+
+Using 9 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126908.534565
+ending at 1522126908.534601
+Our runtime is 0.000036 and throughput is 23915865.854305. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 10 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126909.209360
+ending at 1522126909.209418
+Our runtime is 0.000058 and throughput is 15212946.885246. 
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 11 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126909.921390
+ending at 1522126909.921425
+we stopped one
+we stopped one
+we stopped one
+Our runtime is 0.000035 and throughput is 25251422.040816. 
+
+76 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 602 is a generator of Z_863 
+Secret key: x = 76 
+h = g^x = 654
+
+Using 12 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126910.668924
+ending at 1522126910.669002
+Our runtime is 0.000078 and throughput is 11043717.871560. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 13 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126911.522709
+ending at 1522126911.522892
+Our runtime is 0.000183 and throughput is 4833280.000000. 
+
+76 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 602 is a generator of Z_863 
+Secret key: x = 76 
+h = g^x = 654
+
+Using 14 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126912.370334
+ending at 1522126912.370396
+Our runtime is 0.000062 and throughput is 13889599.015385. 
+
+76 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 602 is a generator of Z_863 
+Secret key: x = 76 
+h = g^x = 654
+
+Using 15 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126913.250664
+ending at 1522126913.250863
+Our runtime is 0.000199 and throughput is 4324905.082635. 
+
+76 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 602 is a generator of Z_863 
+Secret key: x = 76 
+h = g^x = 654
+
+Using 16 processes to find the secret key...
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+we stopped one
+starting at 1522126914.178719
+ending at 1522126914.178938
+Our runtime is 0.000219 and throughput is 3933873.359477. 
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 17 slots 
+that were requested by the application:
+  main
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 18 slots 
+that were requested by the application:
+  main
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 19 slots 
+that were requested by the application:
+  main
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 20 slots 
+that were requested by the application:
+  main
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
