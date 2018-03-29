@@ -1,0 +1,221 @@
+make: Nothing to be done for `all'.
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 16
+
+Using 1 processes to find the secret key...
+Secret key found! x = 4 
+Our runtime is 0.000008 and throughput is 2669102.545455. 
+
+6 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 21 is a generator of Z_23 
+Secret key: x = 6 
+h = g^x = 18
+
+Using 2 processes to find the secret key...
+Secret key found! x = 6 
+Our runtime is 0.000009 and throughput is 2317904.842105. 
+
+15 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 20 is a generator of Z_23 
+Secret key: x = 15 
+h = g^x = 11
+
+Using 3 processes to find the secret key...
+Secret key found! x = 15 
+Our runtime is 0.000040 and throughput is 524288.000000. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 15 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 2
+
+Using 4 processes to find the secret key...
+Secret key found! x = 4 
+Our runtime is 0.000017 and throughput is 1240568.788732. 
+
+12 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 20 is a generator of Z_23 
+Secret key: x = 12 
+h = g^x = 3
+
+Using 5 processes to find the secret key...
+Secret key found! x = 12 
+Our runtime is 0.000066 and throughput is 319131.826087. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 15 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 2
+
+Using 6 processes to find the secret key...
+Secret key found! x = 4 
+Our runtime is 0.000059 and throughput is 355162.838710. 
+
+12 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 20 is a generator of Z_23 
+Secret key: x = 12 
+h = g^x = 3
+
+Using 7 processes to find the secret key...
+Secret key found! x = 12 
+Our runtime is 0.000032 and throughput is 657316.298507. 
+
+15 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 20 is a generator of Z_23 
+Secret key: x = 15 
+h = g^x = 11
+
+Using 8 processes to find the secret key...
+Secret key found! x = 15 
+Our runtime is 0.000049 and throughput is 427574.679612. 
+
+12 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 20 is a generator of Z_23 
+Secret key: x = 12 
+h = g^x = 3
+
+Using 9 processes to find the secret key...
+Secret key found! x = 12 
+Our runtime is 0.000037 and throughput is 564617.846154. 
+
+0 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 20 is a generator of Z_23 
+Secret key: x = 0 
+h = g^x = 1
+
+Using 10 processes to find the secret key...
+Secret key found! x = 0 
+Our runtime is 0.000040 and throughput is 527427.449102. 
+
+15 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 20 is a generator of Z_23 
+Secret key: x = 15 
+h = g^x = 11
+
+Using 11 processes to find the secret key...
+Secret key found! x = 15 
+Our runtime is 0.000053 and throughput is 394979.300448. 
+
+0 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 20 is a generator of Z_23 
+Secret key: x = 0 
+h = g^x = 1
+
+Using 12 processes to find the secret key...
+Secret key found! x = 0 
+Our runtime is 0.000049 and throughput is 429660.409756. 
+
+0 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 20 is a generator of Z_23 
+Secret key: x = 0 
+h = g^x = 1
+
+Using 13 processes to find the secret key...
+Secret key found! x = 0 
+Our runtime is 0.000097 and throughput is 216413.719902. 
+
+0 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 20 is a generator of Z_23 
+Secret key: x = 0 
+h = g^x = 1
+
+Using 14 processes to find the secret key...
+Secret key found! x = 0 
+Our runtime is 0.000088 and throughput is 238700.227642. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 11 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 13
+
+Using 15 processes to find the secret key...
+Secret key found! x = 4 
+Our runtime is 0.000076 and throughput is 276114.056426. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 14 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 6
+
+Using 16 processes to find the secret key...
+Secret key found! x = 4 
+Our runtime is 0.000037 and throughput is 568260.541935. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 14 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 6
+
+Using 17 processes to find the secret key...
+Secret key found! x = 4 
+Our runtime is 0.000067 and throughput is 313453.323843. 
+
+12 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 17 is a generator of Z_23 
+Secret key: x = 12 
+h = g^x = 6
+
+Using 18 processes to find the secret key...
+Secret key found! x = 12 
+Our runtime is 0.000034 and throughput is 620284.394366. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 14 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 6
+
+Using 19 processes to find the secret key...
+Secret key found! x = 4 
+Our runtime is 0.000059 and throughput is 355162.838710. 
+
+4 x is and 23 p is 
+ElGamal Setup successful.
+p = 23. 
+g = 14 is a generator of Z_23 
+Secret key: x = 4 
+h = g^x = 6
+
+Using 20 processes to find the secret key...
+Secret key found! x = 4 
+Our runtime is 0.000075 and throughput is 280510.777070. 
