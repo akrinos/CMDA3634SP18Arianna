@@ -1,0 +1,221 @@
+make: Nothing to be done for `all'.
+
+277 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 119 is a generator of Z_863 
+Secret key: x = 277 
+h = g^x = 416
+
+Using 1 processes to find the secret key...
+Secret key found! x = 277 
+Our runtime is 0.000662 and throughput is 1300430.588405. 
+
+277 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 119 is a generator of Z_863 
+Secret key: x = 277 
+h = g^x = 416
+
+Using 2 processes to find the secret key...
+Secret key found! x = 277 
+Our runtime is 0.000319 and throughput is 2699025.219731. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 3 processes to find the secret key...
+Secret key found! x = 869 
+Our runtime is 0.000312 and throughput is 2837889.174312. 
+
+277 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 119 is a generator of Z_863 
+Secret key: x = 277 
+h = g^x = 416
+
+Using 4 processes to find the secret key...
+Secret key found! x = 277 
+Our runtime is 0.000188 and throughput is 4577054.174905. 
+
+277 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 119 is a generator of Z_863 
+Secret key: x = 277 
+h = g^x = 416
+
+Using 5 processes to find the secret key...
+Secret key found! x = 277 
+Our runtime is 0.000165 and throughput is 5218635.468208. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 6 processes to find the secret key...
+Secret key found! x = 869 
+Our runtime is 0.000160 and throughput is 5531980.685544. 
+
+277 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 119 is a generator of Z_863 
+Secret key: x = 277 
+h = g^x = 416
+
+Using 7 processes to find the secret key...
+Secret key found! x = 277 
+Our runtime is 0.000093 and throughput is 9259732.676923. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 8 processes to find the secret key...
+Secret key found! x = 869 
+Our runtime is 0.000140 and throughput is 6323609.948893. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 9 processes to find the secret key...
+Secret key found! x = 869 
+Our runtime is 0.000151 and throughput is 5854824.984227. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 10 processes to find the secret key...
+Secret key found! x = 869 
+Our runtime is 0.000127 and throughput is 6964275.872420. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 11 processes to find the secret key...
+Secret key found! x = 869 
+Our runtime is 0.000115 and throughput is 7685215.403727. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 12 processes to find the secret key...
+Secret key found! x = 869 
+Our runtime is 0.000097 and throughput is 9142756.256158. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 13 processes to find the secret key...
+Secret key found! x = 869 
+Our runtime is 0.000099 and throughput is 8944479.614458. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 14 processes to find the secret key...
+Secret key found! x = 869 
+Our runtime is 0.000233 and throughput is 3799343.950870. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 15 processes to find the secret key...
+Secret key found! x = 869 
+Our runtime is 0.000097 and throughput is 9120292.481572. 
+
+76 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 602 is a generator of Z_863 
+Secret key: x = 76 
+h = g^x = 654
+
+Using 16 processes to find the secret key...
+Secret key found! x = 76 
+Our runtime is 0.000064 and throughput is 13424891.241636. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 17 processes to find the secret key...
+Secret key found! x = 869 
+Our runtime is 0.000088 and throughput is 10059509.593496. 
+
+869 x is and 887 p is 
+ElGamal Setup successful.
+p = 887. 
+g = 871 is a generator of Z_887 
+Secret key: x = 869 
+h = g^x = 380
+
+Using 18 processes to find the secret key...
+Secret key found! x = 869 
+Our runtime is 0.000119 and throughput is 7438795.671343. 
+
+518 x is and 587 p is 
+ElGamal Setup successful.
+p = 587. 
+g = 393 is a generator of Z_587 
+Secret key: x = 518 
+h = g^x = 269
+
+Using 19 processes to find the secret key...
+Secret key found! x = 518 
+Our runtime is 0.000026 and throughput is 22510714.128440. 
+
+76 x is and 863 p is 
+ElGamal Setup successful.
+p = 863. 
+g = 602 is a generator of Z_863 
+Secret key: x = 76 
+h = g^x = 654
+
+Using 20 processes to find the secret key...
+Secret key found! x = 76 
+Our runtime is 0.000119 and throughput is 7237065.619238. 

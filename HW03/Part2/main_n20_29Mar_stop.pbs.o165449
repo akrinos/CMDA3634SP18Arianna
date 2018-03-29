@@ -1,0 +1,431 @@
+make: Nothing to be done for `all'.
+
+468635 x is and 538079 p is 
+ElGamal Setup successful.
+p = 538079. 
+g = 145312 is a generator of Z_538079 
+Secret key: x = 468635 
+h = g^x = 187689
+
+Using 1 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 538078 
+Secret key found! x = 468635 
+Our runtime is 2.004133 and throughput is 268483.680345. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 2 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 315743 
+We are rank 1 and we cover numbers 315743 through 631486 
+Secret key found! x = 108260 
+Our runtime is 0.512833 and throughput is 1231366.054328. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 3 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 210495 
+We are rank 1 and we cover numbers 210495 through 420990 
+We are rank 2 and we cover numbers 420990 through 631485 
+Secret key found! x = 108260 
+Our runtime is 0.538514 and throughput is 1172643.828412. 
+
+468635 x is and 538079 p is 
+ElGamal Setup successful.
+p = 538079. 
+g = 145312 is a generator of Z_538079 
+Secret key: x = 468635 
+h = g^x = 187689
+
+Using 4 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 134519 
+We are rank 2 and we cover numbers 269038 through 403557 
+We are rank 1 and we cover numbers 134519 through 269038 
+We are rank 3 and we cover numbers 403557 through 538076 
+Secret key found! x = 468635 
+Our runtime is 0.316610 and throughput is 1699494.120984. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 5 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 126297 
+We are rank 1 and we cover numbers 126297 through 252594 
+We are rank 2 and we cover numbers 252594 through 378891 
+We are rank 3 and we cover numbers 378891 through 505188 
+We are rank 4 and we cover numbers 505188 through 631485 
+Secret key found! x = 108260 
+Our runtime is 0.557758 and throughput is 1132184.378964. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 6 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 105247 
+We are rank 1 and we cover numbers 105247 through 210494 
+We are rank 2 and we cover numbers 210494 through 315741 
+We are rank 4 and we cover numbers 420988 through 526235 
+We are rank 5 and we cover numbers 526235 through 631482 
+We are rank 3 and we cover numbers 315741 through 420988 
+Secret key found! x = 108260 
+Our runtime is 0.015497 and throughput is 40748935.544239. 
+
+468635 x is and 538079 p is 
+ElGamal Setup successful.
+p = 538079. 
+g = 145312 is a generator of Z_538079 
+Secret key: x = 468635 
+h = g^x = 187689
+
+Using 7 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 76868 
+We are rank 4 and we cover numbers 307472 through 384340 
+We are rank 5 and we cover numbers 384340 through 461208 
+We are rank 6 and we cover numbers 461208 through 538076 
+We are rank 1 and we cover numbers 76868 through 153736 
+We are rank 2 and we cover numbers 153736 through 230604 
+We are rank 3 and we cover numbers 230604 through 307472 
+Secret key found! x = 468635 
+Our runtime is 0.038011 and throughput is 14155795.731092. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 8 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 78935 
+We are rank 6 and we cover numbers 473610 through 552545 
+We are rank 7 and we cover numbers 552545 through 631480 
+We are rank 1 and we cover numbers 78935 through 157870 
+We are rank 2 and we cover numbers 157870 through 236805 
+We are rank 3 and we cover numbers 236805 through 315740 
+We are rank 4 and we cover numbers 315740 through 394675 
+We are rank 5 and we cover numbers 394675 through 473610 
+Secret key found! x = 108260 
+Our runtime is 0.154032 and throughput is 4099700.276353. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 9 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 70165 
+We are rank 8 and we cover numbers 561320 through 631485 
+We are rank 2 and we cover numbers 140330 through 210495 
+We are rank 4 and we cover numbers 280660 through 350825 
+We are rank 1 and we cover numbers 70165 through 140330 
+We are rank 3 and we cover numbers 210495 through 280660 
+We are rank 6 and we cover numbers 420990 through 491155 
+We are rank 5 and we cover numbers 350825 through 420990 
+We are rank 7 and we cover numbers 491155 through 561320 
+Our runtime is 0.202926 and throughput is 3111899.152588. 
+Secret key found! x = 108260 
+
+468635 x is and 538079 p is 
+ElGamal Setup successful.
+p = 538079. 
+g = 145312 is a generator of Z_538079 
+Secret key: x = 468635 
+h = g^x = 187689
+
+Using 10 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 53807 
+We are rank 1 and we cover numbers 53807 through 107614 
+We are rank 2 and we cover numbers 107614 through 161421 
+We are rank 4 and we cover numbers 215228 through 269035 
+We are rank 8 and we cover numbers 430456 through 484263 
+We are rank 6 and we cover numbers 322842 through 376649 
+We are rank 9 and we cover numbers 484263 through 538070 
+We are rank 3 and we cover numbers 161421 through 215228 
+We are rank 5 and we cover numbers 269035 through 322842 
+We are rank 7 and we cover numbers 376649 through 430456 
+Secret key found! x = 468635 
+Our runtime is 0.198389 and throughput is 2712234.559193. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 11 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 57407 
+We are rank 5 and we cover numbers 287035 through 344442 
+We are rank 6 and we cover numbers 344442 through 401849 
+We are rank 8 and we cover numbers 459256 through 516663 
+We are rank 9 and we cover numbers 516663 through 574070 
+We are rank 10 and we cover numbers 574070 through 631477 
+We are rank 1 and we cover numbers 57407 through 114814 
+We are rank 2 and we cover numbers 114814 through 172221 
+We are rank 3 and we cover numbers 172221 through 229628 
+We are rank 4 and we cover numbers 229628 through 287035 
+We are rank 7 and we cover numbers 401849 through 459256 
+Secret key found! x = 108260 
+Our runtime is 0.270569 and throughput is 2333914.081468. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 12 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 52623 
+We are rank 2 and we cover numbers 105246 through 157869 
+We are rank 4 and we cover numbers 210492 through 263115 
+We are rank 8 and we cover numbers 420984 through 473607 
+We are rank 10 and we cover numbers 526230 through 578853 
+We are rank 1 and we cover numbers 52623 through 105246 
+We are rank 5 and we cover numbers 263115 through 315738 
+We are rank 6 and we cover numbers 315738 through 368361 
+We are rank 7 and we cover numbers 368361 through 420984 
+We are rank 9 and we cover numbers 473607 through 526230 
+We are rank 3 and we cover numbers 157869 through 210492 
+We are rank 11 and we cover numbers 578853 through 631476 
+Secret key found! x = 108260 
+Our runtime is 0.016277 and throughput is 38796544.037498. 
+
+58036 x is and 587087 p is 
+ElGamal Setup successful.
+p = 587087. 
+g = 573810 is a generator of Z_587087 
+Secret key: x = 58036 
+h = g^x = 72439
+
+Using 13 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 45160 
+We are rank 2 and we cover numbers 90320 through 135480 
+We are rank 6 and we cover numbers 270960 through 316120 
+We are rank 8 and we cover numbers 361280 through 406440 
+We are rank 10 and we cover numbers 451600 through 496760 
+We are rank 12 and we cover numbers 541920 through 587080 
+We are rank 4 and we cover numbers 180640 through 225800 
+We are rank 5 and we cover numbers 225800 through 270960 
+We are rank 9 and we cover numbers 406440 through 451600 
+We are rank 1 and we cover numbers 45160 through 90320 
+We are rank 3 and we cover numbers 135480 through 180640 
+We are rank 11 and we cover numbers 496760 through 541920 
+We are rank 7 and we cover numbers 316120 through 361280 
+Secret key found! x = 58036 
+Our runtime is 0.065910 and throughput is 8907360.050353. 
+
+58036 x is and 587087 p is 
+ElGamal Setup successful.
+p = 587087. 
+g = 573810 is a generator of Z_587087 
+Secret key: x = 58036 
+h = g^x = 72439
+
+Using 14 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 41934 
+We are rank 5 and we cover numbers 209670 through 251604 
+We are rank 6 and we cover numbers 251604 through 293538 
+We are rank 8 and we cover numbers 335472 through 377406 
+We are rank 9 and we cover numbers 377406 through 419340 
+We are rank 10 and we cover numbers 419340 through 461274 
+We are rank 12 and we cover numbers 503208 through 545142 
+We are rank 1 and we cover numbers 41934 through 83868 
+We are rank 2 and we cover numbers 83868 through 125802 
+We are rank 4 and we cover numbers 167736 through 209670 
+We are rank 11 and we cover numbers 461274 through 503208 
+We are rank 13 and we cover numbers 545142 through 587076 
+We are rank 3 and we cover numbers 125802 through 167736 
+We are rank 7 and we cover numbers 293538 through 335472 
+Secret key found! x = 58036 
+Our runtime is 0.083037 and throughput is 7070170.045653. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 15 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 42099 
+We are rank 1 and we cover numbers 42099 through 84198 
+We are rank 4 and we cover numbers 168396 through 210495 
+We are rank 8 and we cover numbers 336792 through 378891 
+We are rank 12 and we cover numbers 505188 through 547287 
+We are rank 13 and we cover numbers 547287 through 589386 
+We are rank 14 and we cover numbers 589386 through 631485 
+We are rank 2 and we cover numbers 84198 through 126297 
+We are rank 3 and we cover numbers 126297 through 168396 
+We are rank 5 and we cover numbers 210495 through 252594 
+We are rank 6 and we cover numbers 252594 through 294693 
+We are rank 9 and we cover numbers 378891 through 420990 
+We are rank 10 and we cover numbers 420990 through 463089 
+We are rank 11 and we cover numbers 463089 through 505188 
+We are rank 7 and we cover numbers 294693 through 336792 
+Secret key found! x = 108260 
+Our runtime is 0.133881 and throughput is 4716768.550318. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 16 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 39467 
+We are rank 1 and we cover numbers 39467 through 78934 
+We are rank 2 and we cover numbers 78934 through 118401 
+We are rank 8 and we cover numbers 315736 through 355203 
+We are rank 9 and we cover numbers 355203 through 394670 
+We are rank 10 and we cover numbers 394670 through 434137 
+We are rank 12 and we cover numbers 473604 through 513071 
+We are rank 3 and we cover numbers 118401 through 157868 
+We are rank 4 and we cover numbers 157868 through 197335 
+We are rank 5 and we cover numbers 197335 through 236802 
+We are rank 6 and we cover numbers 236802 through 276269 
+We are rank 11 and we cover numbers 434137 through 473604 
+We are rank 7 and we cover numbers 276269 through 315736 
+We are rank 14 and we cover numbers 552538 through 592005 
+We are rank 15 and we cover numbers 592005 through 631472 
+We are rank 13 and we cover numbers 513071 through 552538 
+Our runtime is 0.160774 and throughput is 3927780.793582. 
+Secret key found! x = 108260 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 17 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 37146 
+We are rank 9 and we cover numbers 334314 through 371460 
+We are rank 10 and we cover numbers 371460 through 408606 
+We are rank 12 and we cover numbers 445752 through 482898 
+We are rank 14 and we cover numbers 520044 through 557190 
+We are rank 16 and we cover numbers 594336 through 631482 
+We are rank 1 and we cover numbers 37146 through 74292 
+We are rank 2 and we cover numbers 74292 through 111438 
+We are rank 4 and we cover numbers 148584 through 185730 
+We are rank 6 and we cover numbers 222876 through 260022 
+We are rank 8 and we cover numbers 297168 through 334314 
+We are rank 5 and we cover numbers 185730 through 222876 
+We are rank 7 and we cover numbers 260022 through 297168 
+We are rank 11 and we cover numbers 408606 through 445752 
+We are rank 13 and we cover numbers 482898 through 520044 
+We are rank 3 and we cover numbers 111438 through 148584 
+We are rank 15 and we cover numbers 557190 through 594336 
+Secret key found! x = 108260 
+Our runtime is 0.186876 and throughput is 3379169.115938. 
+
+58036 x is and 587087 p is 
+ElGamal Setup successful.
+p = 587087. 
+g = 573810 is a generator of Z_587087 
+Secret key: x = 58036 
+h = g^x = 72439
+
+Using 18 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 32615 
+We are rank 1 and we cover numbers 32615 through 65230 
+We are rank 4 and we cover numbers 130460 through 163075 
+We are rank 8 and we cover numbers 260920 through 293535 
+We are rank 16 and we cover numbers 521840 through 554455 
+We are rank 17 and we cover numbers 554455 through 587070 
+We are rank 2 and we cover numbers 65230 through 97845 
+We are rank 6 and we cover numbers 195690 through 228305 
+We are rank 9 and we cover numbers 293535 through 326150 
+We are rank 10 and we cover numbers 326150 through 358765 
+We are rank 12 and we cover numbers 391380 through 423995 
+We are rank 14 and we cover numbers 456610 through 489225 
+We are rank 11 and we cover numbers 358765 through 391380 
+We are rank 3 and we cover numbers 97845 through 130460 
+We are rank 5 and we cover numbers 163075 through 195690 
+We are rank 7 and we cover numbers 228305 through 260920 
+We are rank 15 and we cover numbers 489225 through 521840 
+We are rank 13 and we cover numbers 423995 through 456610 
+Secret key found! x = 58036 
+Our runtime is 0.131252 and throughput is 4472958.694449. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 19 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 33236 
+We are rank 16 and we cover numbers 531776 through 565012 
+We are rank 18 and we cover numbers 598248 through 631484 
+We are rank 2 and we cover numbers 66472 through 99708 
+We are rank 8 and we cover numbers 265888 through 299124 
+We are rank 3 and we cover numbers 99708 through 132944 
+We are rank 4 and we cover numbers 132944 through 166180 
+We are rank 6 and we cover numbers 199416 through 232652 
+We are rank 7 and we cover numbers 232652 through 265888 
+We are rank 9 and we cover numbers 299124 through 332360 
+We are rank 10 and we cover numbers 332360 through 365596 
+We are rank 11 and we cover numbers 365596 through 398832 
+We are rank 12 and we cover numbers 398832 through 432068 
+We are rank 13 and we cover numbers 432068 through 465304 
+We are rank 14 and we cover numbers 465304 through 498540 
+We are rank 15 and we cover numbers 498540 through 531776 
+We are rank 17 and we cover numbers 565012 through 598248 
+We are rank 1 and we cover numbers 33236 through 66472 
+We are rank 5 and we cover numbers 166180 through 199416 
+Secret key found! x = 108260 
+Our runtime is 0.046590 and throughput is 13554062.736051. 
+
+58036 x is and 587087 p is 
+ElGamal Setup successful.
+p = 587087. 
+g = 573810 is a generator of Z_587087 
+Secret key: x = 58036 
+h = g^x = 72439
+
+Using 20 processes to find the secret key...
+We are rank 0 and we cover numbers 0 through 29354 
+We are rank 16 and we cover numbers 469664 through 499018 
+We are rank 18 and we cover numbers 528372 through 557726 
+We are rank 2 and we cover numbers 58708 through 88062 
+We are rank 1 and we cover numbers 29354 through 58708 
+We are rank 3 and we cover numbers 88062 through 117416 
+We are rank 4 and we cover numbers 117416 through 146770 
+We are rank 5 and we cover numbers 146770 through 176124 
+We are rank 6 and we cover numbers 176124 through 205478 
+We are rank 7 and we cover numbers 205478 through 234832 
+We are rank 8 and we cover numbers 234832 through 264186 
+We are rank 9 and we cover numbers 264186 through 293540 
+We are rank 10 and we cover numbers 293540 through 322894 
+We are rank 11 and we cover numbers 322894 through 352248 
+We are rank 12 and we cover numbers 352248 through 381602 
+We are rank 13 and we cover numbers 381602 through 410956 
+We are rank 14 and we cover numbers 410956 through 440310 
+We are rank 15 and we cover numbers 440310 through 469664 
+We are rank 17 and we cover numbers 499018 through 528372 
+We are rank 19 and we cover numbers 557726 through 587080 
+Secret key found! x = 58036 
+Our runtime is 0.150577 and throughput is 3898900.453539. 
