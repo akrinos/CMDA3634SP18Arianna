@@ -78,7 +78,7 @@ int main (int argc, char **argv) {
   }
   int found = 0;
   int result = -1;
-  bool stopIt = false; 
+  bool stopIt = true; // toggle to tell program whether to stop when found 
   //loop through the values from 'start' to 'end'
   for (unsigned int i=start;i<end;i++) {
     int res = modExp(g, i, p); 
