@@ -1,0 +1,221 @@
+make: Nothing to be done for `all'.
+
+468635 x is and 538079 p is 
+ElGamal Setup successful.
+p = 538079. 
+g = 145312 is a generator of Z_538079 
+Secret key: x = 468635 
+h = g^x = 187689
+
+Using 1 processes to find the secret key...
+Secret key found! x = 468635 
+Our runtime is 2.323133 and throughput is 231616.959469. 
+
+468635 x is and 538079 p is 
+ElGamal Setup successful.
+p = 538079. 
+g = 145312 is a generator of Z_538079 
+Secret key: x = 468635 
+h = g^x = 187689
+
+Using 2 processes to find the secret key...
+Secret key found! x = 468635 
+Our runtime is 1.220835 and throughput is 440744.988415. 
+
+468635 x is and 538079 p is 
+ElGamal Setup successful.
+p = 538079. 
+g = 145312 is a generator of Z_538079 
+Secret key: x = 468635 
+h = g^x = 187689
+
+Using 3 processes to find the secret key...
+Secret key found! x = 468635 
+Our runtime is 0.822293 and throughput is 654361.610488. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 4 processes to find the secret key...
+Secret key found! x = 108260 
+Our runtime is 0.755848 and throughput is 835465.672627. 
+
+468635 x is and 538079 p is 
+ElGamal Setup successful.
+p = 538079. 
+g = 145312 is a generator of Z_538079 
+Secret key: x = 468635 
+h = g^x = 187689
+
+Using 5 processes to find the secret key...
+Secret key found! x = 468635 
+Our runtime is 0.497551 and throughput is 1081451.024212. 
+
+468635 x is and 538079 p is 
+ElGamal Setup successful.
+p = 538079. 
+g = 145312 is a generator of Z_538079 
+Secret key: x = 468635 
+h = g^x = 187689
+
+Using 6 processes to find the secret key...
+Secret key found! x = 468635 
+Our runtime is 0.415447 and throughput is 1295176.049625. 
+
+468635 x is and 538079 p is 
+ElGamal Setup successful.
+p = 538079. 
+g = 145312 is a generator of Z_538079 
+Secret key: x = 468635 
+h = g^x = 187689
+
+Using 7 processes to find the secret key...
+Secret key found! x = 468635 
+Our runtime is 0.356160 and throughput is 1510773.564162. 
+
+468635 x is and 538079 p is 
+ElGamal Setup successful.
+p = 538079. 
+g = 145312 is a generator of Z_538079 
+Secret key: x = 468635 
+h = g^x = 187689
+
+Using 8 processes to find the secret key...
+Secret key found! x = 468635 
+Our runtime is 0.312493 and throughput is 1721884.497115. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 9 processes to find the secret key...
+Secret key found! x = 108260 
+Our runtime is 0.338055 and throughput is 1867995.430893. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 10 processes to find the secret key...
+Secret key found! x = 108260 
+Our runtime is 0.304634 and throughput is 2072931.120216. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 11 processes to find the secret key...
+Secret key found! x = 108260 
+Our runtime is 0.277047 and throughput is 2279343.161721. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 12 processes to find the secret key...
+Secret key found! x = 108260 
+Our runtime is 0.254402 and throughput is 2482231.276653. 
+
+58036 x is and 587087 p is 
+ElGamal Setup successful.
+p = 587087. 
+g = 573810 is a generator of Z_587087 
+Secret key: x = 58036 
+h = g^x = 72439
+
+Using 13 processes to find the secret key...
+Secret key found! x = 58036 
+Our runtime is 0.204302 and throughput is 2873615.905446. 
+
+58036 x is and 587087 p is 
+ElGamal Setup successful.
+p = 587087. 
+g = 573810 is a generator of Z_587087 
+Secret key: x = 58036 
+h = g^x = 72439
+
+Using 14 processes to find the secret key...
+Secret key found! x = 58036 
+Our runtime is 0.189934 and throughput is 3090998.398072. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 15 processes to find the secret key...
+Secret key found! x = 108260 
+Our runtime is 0.202636 and throughput is 3116351.433658. 
+
+58036 x is and 587087 p is 
+ElGamal Setup successful.
+p = 587087. 
+g = 573810 is a generator of Z_587087 
+Secret key: x = 58036 
+h = g^x = 72439
+
+Using 16 processes to find the secret key...
+Secret key found! x = 58036 
+Our runtime is 0.166496 and throughput is 3526119.933614. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 17 processes to find the secret key...
+Secret key found! x = 108260 
+Our runtime is 0.179852 and throughput is 3511136.762634. 
+
+108260 x is and 631487 p is 
+ElGamal Setup successful.
+p = 631487. 
+g = 597518 is a generator of Z_631487 
+Secret key: x = 108260 
+h = g^x = 201573
+
+Using 18 processes to find the secret key...
+Secret key found! x = 108260 
+Our runtime is 0.219858 and throughput is 2872238.049085. 
+
+58036 x is and 587087 p is 
+ElGamal Setup successful.
+p = 587087. 
+g = 573810 is a generator of Z_587087 
+Secret key: x = 58036 
+h = g^x = 72439
+
+Using 19 processes to find the secret key...
+Secret key found! x = 58036 
+Our runtime is 0.141645 and throughput is 4144764.642839. 
+
+58036 x is and 587087 p is 
+ElGamal Setup successful.
+p = 587087. 
+g = 573810 is a generator of Z_587087 
+Secret key: x = 58036 
+h = g^x = 72439
+
+Using 20 processes to find the secret key...
+Secret key found! x = 58036 
+Our runtime is 0.134263 and throughput is 4372647.945165. 

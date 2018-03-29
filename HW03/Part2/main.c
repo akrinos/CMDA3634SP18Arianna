@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
+#include <stdbool.h>
 
 #include "mpi.h"
 #include "functions.h"
@@ -28,9 +29,9 @@ int main (int argc, char **argv) {
     //declare storage for an ElGamal cryptosytem
     unsigned int p, g, h, x;
   if (rank == 0) {
-    printf("Enter a number of bits: "); fflush(stdout);
-    char status = scanf("%u",&n);
-    //n = 20;
+    //printf("Enter a number of bits: "); fflush(stdout);
+    //char status = scanf("%u",&n);
+    n = 20;
     //make sure the input makes sense
     if ((n<3)||(n>31)) {//Updated bounds. 2 is no good, 31 is actually ok
       printf("Unsupported bit size.\n");
@@ -69,14 +70,15 @@ int main (int argc, char **argv) {
   if ((rank == size)) {
 	end = N; // go to p-2 in the loop below 
   }
-  printf("We are rank %d and we cover numbers %u through %u \n", rank, start, end);
+  //printf("We are rank %d and we cover numbers %u through %u \n", rank, start, end);
   MPI_Barrier(MPI_COMM_WORLD);
   double starttime; 
   if (rank == 0) {
 	starttime = MPI_Wtime();
   }
   int found = 0;
-  int result = -1; 
+  int result = -1;
+  bool stopIt = false; 
   //loop through the values from 'start' to 'end'
   for (unsigned int i=start;i<end;i++) {
     int res = modExp(g, i, p); 
@@ -87,7 +89,7 @@ int main (int argc, char **argv) {
     }
     
     // check periodically if the value has been found
-    if (i % 5 == 0) {
+    if (stopIt && (i % 5 == 0 || i == (end - 1))) {
 	int final = 0;
 	MPI_Allreduce(&found, &final, 1, MPI_INT, MPI_BOR, MPI_COMM_WORLD);
 	if (final == 1) {
