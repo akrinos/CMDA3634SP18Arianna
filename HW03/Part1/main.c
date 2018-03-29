@@ -80,12 +80,14 @@ int main (int argc, char **argv) {
       (unsigned int *) malloc(Nmessages*sizeof(unsigned int)); 
 
   //fill the messages with random elements of Z_p
+  if (rank == 1) {
   printf("Bob's original messages are:    [ ");
   for (unsigned int i=0;i<Nmessages;i++) {
     message[i] = randXbitInt(32)%p;
     printf("%u ", message[i]);
   }
   printf("]\n");
+  }
 
   //Encrypt the message with rank 0's ElGamal cyrptographic system
   int tag = 1;
