@@ -28,9 +28,9 @@ int main (int argc, char **argv) {
     //declare storage for an ElGamal cryptosytem
     unsigned int p, g, h, x;
   if (rank == 0) {
-    //printf("Enter a number of bits: "); fflush(stdout);
-    //char status = scanf("%u",&n);
-    n = 20;
+    printf("Enter a number of bits: "); fflush(stdout);
+    char status = scanf("%u",&n);
+    //n = 20;
     //make sure the input makes sense
     if ((n<3)||(n>31)) {//Updated bounds. 2 is no good, 31 is actually ok
       printf("Unsupported bit size.\n");
@@ -69,7 +69,7 @@ int main (int argc, char **argv) {
   if ((rank == size)) {
 	end = N; // go to p-2 in the loop below 
   }
-
+  printf("We are rank %d and we cover numbers %u through %u \n", rank, start, end);
   MPI_Barrier(MPI_COMM_WORLD);
   double starttime; 
   if (rank == 0) {
@@ -85,22 +85,24 @@ int main (int argc, char **argv) {
       found = 1;
       result = i; 
     }
-    /*if (i % 5 == 0) {
+    
+    // check periodically if the value has been found
+    if (i % 5 == 0) {
 	int final = 0;
 	MPI_Allreduce(&found, &final, 1, MPI_INT, MPI_BOR, MPI_COMM_WORLD);
 	if (final == 1) {
 		MPI_Barrier(MPI_COMM_WORLD);
 		break;
 	}
-    } */
+    } 
   }
 
   double endtime;
   MPI_Barrier(MPI_COMM_WORLD);
   if (rank == 0) {
-	printf("starting at %f\n", starttime);
+//	printf("starting at %f\n", starttime);
 	endtime = MPI_Wtime();
-	printf("ending at %f\n", endtime);
+//	printf("ending at %f\n", endtime);
   	double runtime = endtime - starttime;
  	double throughput = (N - 1) / runtime; // number of numbers we get through per second
  	printf("Our runtime is %f and throughput is %f. \n", runtime, throughput);

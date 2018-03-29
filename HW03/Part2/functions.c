@@ -115,7 +115,7 @@ unsigned int findGenerator(unsigned int p) {
   do {
     //make a random number 1<= g < p
     g = randXbitInt(32)%p; //could also have passed n to findGenerator
-  } while ((modExp(g,q,p)==1) || (modExp(g,2,p)==1));
+  } while (((modExp(g,q,p)==1) || (modExp(g,2,p)==1)) && (g != 0));
   
   return g;
 }
