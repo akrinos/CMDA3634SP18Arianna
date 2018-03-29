@@ -118,7 +118,7 @@ int main (int argc, char **argv) {
     printf("(%u,%u) ", message[i],a[i]);
   }
   printf("]\n");
-  }
+  
 
   //Decrypt the message with rank 0's ElGamal cyrptographic system
   printf("Alice's decrypted messages are: [ ");
@@ -128,6 +128,7 @@ int main (int argc, char **argv) {
   }
   printf("]\n");
   printf("\n");
+  }
 
   MPI_Finalize();
 
