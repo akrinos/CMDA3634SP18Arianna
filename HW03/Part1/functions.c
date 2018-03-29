@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <stdbool.h>
 
 #include "functions.h"
 
@@ -114,7 +115,7 @@ unsigned int findGenerator(unsigned int p) {
   do {
     //make a random number 1<= g < p
     g = randXbitInt(32)%p; //could also have passed n to findGenerator
-  } while ((modExp(g,q,p)==1) || (modExp(g,2,p)==1));
+  } while (((modExp(g,q,p)==1) || (modExp(g,2,p)==1)) && (g != 0));
   
   return g;
 }
@@ -122,7 +123,19 @@ unsigned int findGenerator(unsigned int p) {
 void setupElGamal(unsigned int n, unsigned int *p, unsigned int *g, 
                                   unsigned int *h, unsigned int *x) {
   /* Q1.1 Setup an ElGamal cryptographic system */
- 
+  unsigned int tP = randXbitInt(n); 
+  bool gotIt = false;
+  if ((tP - 1) % 2 == 0 && isProbablyPrime((tP - 1) / 2)) {
+	gotIt = true;
+  }
+  while (!isProbablyPrime(tP) || !gotIt) {
+	gotIt = false;
+	tP = randXbitInt(n);
+	if ((tP - 1) % 2 == 0 && isProbablyPrime((tP - 1) / 2)) {
+		gotIt = true;
+	}
+  }
+  *p = tP; 
   unsigned int tG = (findGenerator(*p));
   *g = tG;
   unsigned int tX = (randXbitInt(32) % *p);
@@ -142,13 +155,15 @@ void ElGamalEncrypt(unsigned int *m, unsigned int *a,
                     unsigned int p, unsigned int g, unsigned int h) {
 
   /* Q2.1 Implement the encryption routine for an ElGamal cryptographic system */
-  unsigned int y = (randXbitInt(32) % p);
+  unsigned int y = findGenerator(p);//(randXbitInt(32) % p);
   unsigned int tA = modExp(g, y, p);
   unsigned int tS = modExp(h, y, p);
   unsigned int tM = modprod(*m, tS, p);
-  m = &tM;
-  a = &tA;
-
+  //m = &tM;
+  //a = &tA;
+  *m = tM;
+  *a = tA;
+  //printf("The encrypted M is %u and m is stored as %u\n", tM, *m);
 }
 
 void ElGamalDecrypt(unsigned int *m, unsigned int a, 
@@ -158,5 +173,5 @@ void ElGamalDecrypt(unsigned int *m, unsigned int a,
   unsigned int tS = modExp(a, x, p);
   unsigned int sneg = modExp(tS, p - 2, p);
   unsigned int mres = modprod(*m, sneg, p);
-  m = &mres;
+  *m = mres;
 }

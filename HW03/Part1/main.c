@@ -55,14 +55,14 @@ int main (int argc, char **argv) {
     MPI_Send(&p, 1, MPI_UNSIGNED, 1, tag, MPI_COMM_WORLD); 
     MPI_Send(&g, 1, MPI_UNSIGNED, 1, tag, MPI_COMM_WORLD);
     MPI_Send(&h, 1, MPI_UNSIGNED, 1, tag, MPI_COMM_WORLD);
-    MPI_Send(&x, 1, MPI_UNSIGNED, 1, tag, MPI_COMM_WORLD); 
+    //MPI_Send(&x, 1, MPI_UNSIGNED, 1, tag, MPI_COMM_WORLD); 
   } else {
     // Receive values from Alice
     int tag = 1;
     MPI_Recv(&p, 1, MPI_UNSIGNED, 0, tag, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
     MPI_Recv(&g, 1, MPI_UNSIGNED, 0, tag, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
     MPI_Recv(&h, 1, MPI_UNSIGNED, 0, tag, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
-    MPI_Recv(&x, 1, MPI_UNSIGNED, 0, tag, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+    //MPI_Recv(&x, 1, MPI_UNSIGNED, 0, tag, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
   }
 
   /* Q1.3 Share the public key information */
@@ -94,6 +94,7 @@ int main (int argc, char **argv) {
   if (rank == 1) {
    printf("Bob's encrypted messages are:   [ ");
    for (unsigned int i=0;i<Nmessages;i++) {
+     //printf("\n we have orig %u\n", message[i]);
      ElGamalEncrypt(message+i,a+i,p,g,h);
      printf("(%u,%u) ", message[i], a[i]);
      MPI_Send(&message[i], 1, MPI_UNSIGNED, 0, tag, MPI_COMM_WORLD);
