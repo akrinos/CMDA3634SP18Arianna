@@ -140,7 +140,7 @@ void setupElGamal(unsigned int n, unsigned int *p, unsigned int *g,
   *g = tG;
   unsigned int tX = (randXbitInt(32) % *p);
   *x = tX;
-  printf("%d x is and %d p is \n", *x, *p);
+  //printf("%d x is and %d p is \n", *x, *p);
   unsigned int tH = (modExp(*g, *x, *p)); 
   *h = tH;
   printf("ElGamal Setup successful.\n");
