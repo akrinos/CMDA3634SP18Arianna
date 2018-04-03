@@ -83,8 +83,10 @@ __global__ void  kernelMandelbrot(int Nre, int Nim, complex_t cmin, complex_t cm
   int i = tx + bx * bSizex; // x coord
   int j = ty + by * bSizey; // y coord
   
-  c.r = cmin.r + ty * i;
-  c.i = cmin.i + tx * j;
+  c.r = cmin.r + dr * i;
+  c.i = cmin.i + di + j;
+  //c.r = cmin.r + ty * i;
+  //c.i = cmin.i + tx * j;
   count[i + j * Nre] = testpoint(c);
 //  for(n=0;n<Nim;++n){
 //   for(m=0;m<Nre;++m){
