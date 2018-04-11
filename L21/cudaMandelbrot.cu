@@ -104,10 +104,11 @@ int main(int argc, char **argv){
 
   // to create a 4096x4096 pixel image [ last argument is placeholder for number of threads ] 
   // usage: ./mandelbrot 4096 4096 1  
-  
+  printf("here we go\n");  
 
   int Nre = atoi(argv[1]);
   int Nim = atoi(argv[2]);
+  printf("Nre and Nim are %d and %d\n", Nre, Nim);
   int Nthreads = Nre * Nim; //atoi(argv[3]);
   int N = Nre * Nim;
 
@@ -152,7 +153,13 @@ int main(int argc, char **argv){
   cudaMemcpy(fltArray, count, Nthreads * sizeof(float), cudaMemcpyDeviceToHost);
 
   // output mandelbrot to png format image
-  FILE *fp = fopen("mandelbrot.png", "w");
+  //char Nre_str = malloc(sizeof(char)*(int)log10(Nre));
+  //sprintf(&Nre_str, "%d", Nre);
+  char randomLet = 'A' + (random() % 26);
+  char* fileName = "mandelbrot"; 
+  strcat(fileName, &randomLet);
+  strcat(fileName, ".png");
+  FILE *fp = fopen(fileName, "w");
 
   printf("Printing mandelbrot.png...");
   write_hot_png(fp, Nre, Nim, count, 0, 80);

@@ -12,6 +12,7 @@ cd $PBS_O_WORKDIR
 module purge
 module load gcc cuda
 
+make cudaMandelbrot.o
 make
 
 for ((Nthreads=4096;Nthreads<=8050;Nthreads+=500))
