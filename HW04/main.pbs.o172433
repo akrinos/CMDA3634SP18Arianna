@@ -1,0 +1,358 @@
+make: Nothing to be done for `all'.
+Nthreads=1
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (53769,50112) (23185,5000) (122319,99750) (124865,70099) (109457,81187) (73397,41268) (66114,94449) (35008,19424) (70853,93250) (382,114541) (34412,71576) (140141,51457) (78129,35505) (99663,110790) (117542,16750) (108098,54006) (132489,106249) (143622,36994) (141534,134165) (91264,7942) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 1 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.264192 seconds, throughput was 560952 values tested per second.
+Nthreads=2
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (74053,44750) (120487,99750) (117577,81187) (82936,94449) (71547,93250) (109655,71576) (56689,35505) (27516,16750) (134419,106249) (106107,134165) (80571,34821) (133553,70099) (14637,41268) (94845,19424) (140387,114541) (75031,51457) (92438,110790) (4733,54006) (84812,36994) (91264,7942) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 2 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.0846008 seconds, throughput was 1.75175e+06 values tested per second.
+Nthreads=3
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (99527,13873) (1129,88301) (138308,41268) (47935,93250) (68412,58143) (92418,35586) (128913,134165) (8402,146841) (73493,81187) (88253,19424) (34412,71576) (107611,63860) (3736,85841) (4072,36994) (103935,49680) (130286,94449) (129477,114541) (88356,130154) (83112,104090) (91264,7942) ]
+Decrypted Message = "Hello, this is the messageì`s a string."
+
+Using 3 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.017536 seconds, throughput was 8.45115e+06 values tested per second.
+Nthreads=4
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (129810,148056) (6560,106608) (60846,12370) (67349,54006) (48126,134165) (37564,123749) (68486,106223) (29030,342) (49263,11527) (57412,89662) (111359,104664) (145622,68739) (24999,8109) (92886,16750) (17944,36994) (143342,67516) (82792,44665) (16720,52741) (22481,106249) (91264,7942) ]
+Decrypted Message = "Hello, this is t.e message as a string."
+
+Using 4 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.0898864 seconds, throughput was 1.64874e+06 values tested per second.
+Nthreads=5
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (35983,8867) (116574,138777) (57592,91280) (66142,45645) (54246,33942) (88632,132962) (129466,50672) (115521,106249) (80844,44182) (62988,142690) (42177,34249) (82070,134165) (118178,21052) (64531,117310) (137764,85654) (103646,27692) (15566,124790) (52543,144350) (110387,36994) (91264,7942) ]
+Decrypted Message = "Hello, this is the message as  tstri g."
+
+Using 5 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.0471653 seconds, throughput was 3.14212e+06 values tested per second.
+Nthreads=6
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (61181,35656) (111662,22008) (117644,2822) (85978,55617) (78162,81363) (7572,139364) (44301,77093) (70605,27237) (107147,277) (89387,127572) (123518,62870) (120388,4238) (6535,61208) (1749,24886) (35682,35455) (134782,133845) (36307,94449) (36716,113500) (9834,133944) (91264,7942) ]
+Decrypted Message = "Hello, this is the m ssage as a string."
+
+Using 6 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.0182809 seconds, throughput was 8.10678e+06 values tested per second.
+Nthreads=7
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (121128,74445) (61824,50550) (8932,8286) (4413,42497) (126731,61840) (105498,70394) (118976,143232) (53124,147885) (10379,41913) (105896,62986) (12817,12433) (32593,45271) (121782,116052) (24327,69817) (17944,36994) (97890,40300) (125499,134165) (106456,7942) (42600,48405) (69749,108337) ]
+Decrypted Message = "Hello, this is the message as a stoing."
+
+Using 7 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.0629734 seconds, throughput was 2.35336e+06 values tested per second.
+Nthreads=8
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (71023,98202) (46880,26786) (84389,106249) (9125,124122) (89251,137545) (21113,127643) (134467,5432) (22701,132603) (115344,26432) (118135,86549) (31339,71279) (45307,36994) (124991,59347) (90271,60726) (60681,85814) (25152,114082) (122094,84016) (35055,102656) (104905,63158) (44272,42550) ]
+Decrypted Message = "Helln, this isìshe messaìd as a stìhng."
+
+Using 8 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.0383861 seconds, throughput was 3.86075e+06 values tested per second.
+Nthreads=9
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (1474,4464) (25129,130546) (61365,134165) (27480,34166) (10186,36200) (131102,7942) (2636,64149) (70819,58059) (8649,40258) (89625,96413) (117492,107291) (54726,1114) (12619,69120) (108305,36505) (76040,77380) (62679,75725) (34583,37734) (668,120634) (42724,18603) (26361,67403) ]
+Decrypted Message = "Hellg, this issthe message as a string."
+
+Using 9 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.0186486 seconds, throughput was 7.94691e+06 values tested per second.
+Nthreads=10
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (126826,58820) (19596,117160) (140250,27737) (46505,60457) (79494,105688) (16550,54415) (58511,125620) (35844,13579) (83108,52967) (59233,122678) (129750,42969) (122668,60547) (18401,88534) (49266,81803) (53416,134901) (143367,55426) (70790,9505) (84248,95966) (96789,117699) (91307,24177) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 10 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.00355403 seconds, throughput was 4.16988e+07 values tested per second.
+Nthreads=11
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (23575,15086) (37438,38201) (97010,74910) (108615,77046) (111184,118692) (89705,3091) (44895,9748) (11355,121480) (15231,55131) (76670,7211) (125313,59402) (80566,74601) (70291,137077) (119097,64129) (73648,18674) (45618,100369) (10321,21996) (26968,12066) (122251,51929) (131248,132087) ]
+Decrypted Message = "Hello, this is the message as ìstrirg."
+
+Using 11 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.0330134 seconds, throughput was 4.48905e+06 values tested per second.
+Nthreads=12
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (21793,145728) (98764,139639) (133665,57694) (86941,35873) (19055,74380) (17667,32407) (101613,67020) (18853,100618) (98076,25959) (120440,133371) (75272,59802) (109198,8421) (134184,132660) (147763,7942) (147719,68740) (51232,81527) (118899,115143) (96582,26080) (78586,102731) (20098,97668) ]
+Decrypted Message = "Hello, this is thesmessaoe as s striog."
+
+Using 12 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.0186274 seconds, throughput was 7.95598e+06 values tested per second.
+Nthreads=13
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (55614,112428) (301,57873) (61856,42944) (24393,117310) (101874,146089) (100235,17228) (26589,96209) (97699,140794) (33843,26924) (80418,70000) (145050,134520) (71111,7942) (77698,16765) (3799,2199) (125443,108781) (92595,115952) (31442,88313) (95446,95644) (82219,61702) (48062,147598) ]
+Decrypted Message = "Hello,gthis es thehmessaie as h striig."
+
+Using 13 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.00705158 seconds, throughput was 2.10164e+07 values tested per second.
+Nthreads=14
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (73490,44503) (110480,78810) (3419,56967) (69850,98007) (80922,18452) (111354,83356) (83152,75230) (19509,50891) (63640,17673) (72675,34978) (34104,66955) (43438,74539) (134658,138441) (25914,103281) (34931,125494) (29423,65480) (135269,89963) (141683,92044) (79119,130776) (135169,128290) ]
+Decrypted Message = "He lo, teis issthe mnssagesas a string."
+
+Using 14 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.029964 seconds, throughput was 4.9459e+06 values tested per second.
+Nthreads=15
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (144009,47528) (97915,32881) (64406,120188) (56580,36994) (145263,47860) (23887,28949) (50538,105540) (112539,108379) (1485,58245) (112225,130588) (4831,123612) (49945,120783) (147593,139023) (120379,125431) (132958,94230) (123220,104039) (26521,124492) (141239,88911) (65528,27350) (54243,97180) ]
+Decrypted Message = "He lo, tHis is the m ssage as a stri g."
+
+Using 15 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.018671 seconds, throughput was 7.93738e+06 values tested per second.
+Nthreads=16
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (63927,109171) (62873,134165) (107192,342) (18628,8381) (18427,63760) (14764,85524) (128575,64213) (78655,7942) (57119,89714) (75138,48033) (18337,32940) (139233,33453) (73176,15269) (126542,47213) (19127,90604) (27162,55738) (73382,124865) (109612,137227) (57312,143363) (45096,126722) ]
+Decrypted Message = "Healo, tsis issthe mìrsage as a string."
+
+Using 16 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.00925714 seconds, throughput was 1.60092e+07 values tested per second.
+Nthreads=17
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (73769,3425) (141325,7942) (107669,74636) (101893,111654) (69314,29955) (85775,68263) (108535,115967) (72164,38961) (118291,8038) (32186,114530) (39614,66819) (138940,25976) (89871,6856) (52785,56016) (47477,112383) (127550,14074) (1265,27302) (121710,67445) (100785,41089) (84668,133103) ]
+Decrypted Message = "Heì"
+
+Using 17 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.000843794 seconds, throughput was 1.75634e+08 values tested per second.
+Nthreads=18
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (8646,81090) (129513,44665) (2354,21766) (91055,26669) (114566,3118) (89206,138419) (38277,88044) (23171,62405) (118567,101580) (129601,122607) (50432,55762) (78284,39932) (24659,73966) (72905,95715) (97507,83347) (48489,68058) (23424,103299) (133817,128995) (141444,58794) (97183,132716) ]
+Decrypted Message = "Heglo, tris is the message as a string."
+
+Using 18 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.0186605 seconds, throughput was 7.94186e+06 values tested per second.
+Nthreads=19
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (117733,130434) (140903,39796) (82104,4111) (62809,49629) (55912,115769) (88743,56994) (132228,825) (34051,135230) (35139,134317) (123442,97141) (12341,109268) (47146,6460) (82401,133464) (89756,19936) (117514,134668) (105865,65067) (116556,24497) (108889,107151) (41690,75156) (82193,26963) ]
+Decrypted Message = "He lo, this is the message as a string."
+
+Using 19 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.0107722 seconds, throughput was 1.37575e+07 values tested per second.
+Nthreads=20
+
+ElGamal Setup successful.
+p = 148199. 
+g = 107329 is a generator of Z_148199 
+Secret key: x = 104879 
+h = g^x = 93788
+
+Message = "Hello, this is the message as a string."
+39 is string length, 2 is charsPerInt
+Padded Message = "Hello, this is the message as a string. "
+The encrypted text is:  (144697,125456) (106850,79111) (100495,82063) (135250,5000) (17109,76667) (62893,35703) (78745,104529) (66597,38089) (81040,138234) (128486,73795) (93775,69236) (137976,66439) (54351,6826) (9587,122041) (16991,88593) (104495,12450) (111636,107374) (37846,57888) (94276,99750) (96543,108555) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 20 OpenMP threads to find the secret key...
+Secret key found! x = 104878 
+Searching all keys took 0.0035564 seconds, throughput was 4.16711e+07 values tested per second.
+
+Usage:
+ kill [options] <pid|name> [...]
+
+Options:
+ -a, --all              do not restrict the name-to-pid conversion to processes
+                        with the same uid as the present process
+ -s, --signal <sig>     send specified signal
+ -q, --queue <sig>      use sigqueue(2) rather than kill(2)
+ -p, --pid              print pids without signaling them
+ -l, --list [=<signal>] list signal names, or convert one to a name
+ -L, --table            list signal names and numbers
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see kill(1).
