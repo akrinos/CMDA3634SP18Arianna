@@ -1,0 +1,38 @@
+nvcc -arch=sm_60 -I. -c cudaMandelbrot.cu
+nvcc -arch=sm_60 -I. -c png_util.c
+nvcc -arch=sm_60 -o mandelbrot mandelbrot.o png_util.o -lpng -lm
+nvlink fatal   : Could not open input file 'mandelbrot.o'
+make: *** [mandelbrot] Error 1
+Nthreads=4096
+/opt/torque/torque/spool/mom_priv/jobs/168585.master.cluster.SC: line 20: ./mandelbrot: No such file or directory
+Nthreads=4596
+/opt/torque/torque/spool/mom_priv/jobs/168585.master.cluster.SC: line 20: ./mandelbrot: No such file or directory
+Nthreads=5096
+/opt/torque/torque/spool/mom_priv/jobs/168585.master.cluster.SC: line 20: ./mandelbrot: No such file or directory
+Nthreads=5596
+/opt/torque/torque/spool/mom_priv/jobs/168585.master.cluster.SC: line 20: ./mandelbrot: No such file or directory
+Nthreads=6096
+/opt/torque/torque/spool/mom_priv/jobs/168585.master.cluster.SC: line 20: ./mandelbrot: No such file or directory
+Nthreads=6596
+/opt/torque/torque/spool/mom_priv/jobs/168585.master.cluster.SC: line 20: ./mandelbrot: No such file or directory
+Nthreads=7096
+/opt/torque/torque/spool/mom_priv/jobs/168585.master.cluster.SC: line 20: ./mandelbrot: No such file or directory
+Nthreads=7596
+/opt/torque/torque/spool/mom_priv/jobs/168585.master.cluster.SC: line 20: ./mandelbrot: No such file or directory
+
+Usage:
+ kill [options] <pid|name> [...]
+
+Options:
+ -a, --all              do not restrict the name-to-pid conversion to processes
+                        with the same uid as the present process
+ -s, --signal <sig>     send specified signal
+ -q, --queue <sig>      use sigqueue(2) rather than kill(2)
+ -p, --pid              print pids without signaling them
+ -l, --list [=<signal>] list signal names, or convert one to a name
+ -L, --table            list signal names and numbers
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see kill(1).

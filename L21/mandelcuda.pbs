@@ -1,0 +1,24 @@
+#! /bin/bash
+#
+#PBS -l walltime=00:10:00
+#PBS -l nodes=1:ppn=1:gpus=1
+#PBS -W group_list=newriver
+#PBS -q p100_normal_q
+#PBS -A CMDA3634SP18
+#PBS -j oe
+
+cd $PBS_O_WORKDIR
+
+module purge
+module load gcc cuda
+
+make
+
+for ((Nthreads=4096;Nthreads<=8050;Nthreads+=500))
+do 
+    echo Nthreads=$Nthreads
+    ./mandelbrot $Nthreads $Nthreads 1;
+done;
+
+
+
