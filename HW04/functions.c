@@ -4,6 +4,7 @@
 #include <string.h>
 
 #include "functions.h"
+#include "omp.h"
 
 //compute a*b mod p safely
 unsigned int modprod(unsigned int a, unsigned int b, unsigned int p) {
@@ -152,7 +153,7 @@ void ElGamalEncrypt(unsigned int *m, unsigned int *a, unsigned int Nints,
                     unsigned int p, unsigned int g, unsigned int h) {
 
   /* Q2.1 Parallelize this function with OpenMP   */
-
+  #pragma omp parallel for 
   for (unsigned int i=0; i<Nints;i++) {
     //pick y in Z_p randomly
     unsigned int y;
@@ -175,7 +176,7 @@ void ElGamalDecrypt(unsigned int *m, unsigned int *a, unsigned int Nints,
                     unsigned int p, unsigned int x) {
 
   /* Q2.1 Parallelize this function with OpenMP   */
-
+  #pragma omp parallel for 
   for (unsigned int i=0; i<Nints;i++) {
     //compute s = a^x
     unsigned int s = modExp(a[i],x,p);
@@ -214,7 +215,24 @@ void convertStringToZ(unsigned char *string, unsigned int Nchars,
 
   /* Q1.3 Complete this function   */
   /* Q2.2 Parallelize this function with OpenMP   */
-
+  char* curr = malloc(Nchars / Nints); // num chars per int 
+  #pragma omp parallel for shared(curr)
+  for (int i = 0; i < Nchars; i++) {
+     curr[(i % (Nchars / Nints))] = string[i];
+     if ((i % (Nchars / Nints)) == (Nchars / Nints - 1)) {
+	//printf("%s\n", curr);
+	int num = 0;
+	for (int g = 0; g < Nchars / Nints; g++) {
+	    //printf("num is %d when we're setting %d\n", num, (i / (Nchars / Nints)));
+	    num += (curr[g] << (g * 8));
+//	    printf("curr is %c num is %d when we're setting %d\n", (char) curr[g], num, (i / (Nchars / Nints)));	
+	} 
+	Z[i / (Nchars / Nints)] = num;
+//	printf("%d z entry in slot %d \n", Z[i /(Nchars /  Nints)], i / (Nchars / Nints));
+     }
+     //curr[(i % (Nchars / Nints))] = string[i]; 
+  }
+  free(curr);
 }
 
 
@@ -223,6 +241,29 @@ void convertZToString(unsigned int  *Z,      unsigned int Nints,
 
   /* Q1.4 Complete this function   */
   /* Q2.2 Parallelize this function with OpenMP   */
-
+  //char * curr = malloc (Nchars / Nints); 
+  int currInt; 
+  int num;
+  int globalCtr = 0;
+  int ratio = Nchars / Nints;
+  int t;
+//  printf("%d numints AND ration %d \n", Nints, ratio);
+  //#pragma omp parallel for shared(globalCtr,string,t)
+  for (int i = 0; i < Nints; i++) {
+  	currInt = Z[i];
+	#pragma omp parallel for shared(globalCtr)
+ 	for (t = ratio - 1; t >= 0; t--) {
+//		printf("currInt is %c and we are at pos %d\n",(char)  currInt >> (t * 8), globalCtr);
+		int val = t * 8;
+		string[globalCtr + t] = (char) (currInt >> val); 
+		currInt -= ((currInt >> val) << val);
+	}
+	globalCtr += ratio;
+  }
+  int g = Nchars-1;
+  while (string[g] == ' ') {
+ 	g--; 
+  }
+  string[g+1] = '\0'; // g + 1 to get rid of pad 
 }
 
