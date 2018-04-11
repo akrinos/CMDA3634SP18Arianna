@@ -194,7 +194,7 @@ void ElGamalDecrypt(unsigned int *m, unsigned int *a, unsigned int Nints,
 void padString(unsigned char* string, unsigned int charsPerInt) {
 
   /* Q1.2 Complete this function   */
-  printf("%d is string length, %d is charsPerInt\n", strlen(string), charsPerInt);
+//  printf("%d is string length, %d is charsPerInt\n", strlen(string), charsPerInt);
   int numChars = strlen(string);
   numChars += (numChars % charsPerInt);
   int neededPad = numChars - strlen(string);
@@ -217,20 +217,28 @@ void convertStringToZ(unsigned char *string, unsigned int Nchars,
   /* Q1.3 Complete this function   */
   /* Q2.2 Parallelize this function with OpenMP   */
   char* curr = malloc(Nchars / Nints); // num chars per int 
-  #pragma omp parallel for shared(curr)
-  for (int i = 0; i < Nchars; i++) {
-     curr[(i % (Nchars / Nints))] = string[i];
-     if ((i % (Nchars / Nints)) == (Nchars / Nints - 1)) {
-	//printf("%s\n", curr);
-	int num = 0;
-	for (int g = 0; g < Nchars / Nints; g++) {
-	    //printf("num is %d when we're setting %d\n", num, (i / (Nchars / Nints)));
-	    num += (curr[g] << (g * 8));
-//	    printf("curr is %c num is %d when we're setting %d\n", (char) curr[g], num, (i / (Nchars / Nints)));	
-	} 
-	Z[i / (Nchars / Nints)] = num;
-//	printf("%d z entry in slot %d \n", Z[i /(Nchars /  Nints)], i / (Nchars / Nints));
+  int num = 0;
+  #pragma omp parallel for shared(Z)
+  for (int t = ((Nchars/Nints) - 1); t < Nchars; t = t + (Nchars/Nints)) {
+     int num = 0;
+     for (int i = (Nchars/Nints) - 1; i >= 0; i--) {
+     	curr[i] = string[t - i];
+     	num += curr[i] << ((((Nchars/Nints) - 1) - i) * 8);
+     //num += (curr[i % (Nchars / Nints)]) << ((i % (Nchars / Nints)) * 8);
      }
+     //if ((i % (Nchars / Nints)) == (Nchars / Nints - 1)) {
+	//printf("%s\n", curr);
+	//int num = 0;
+	//for (int g = 0; g < Nchars / Nints; g++) {
+	    //printf("num is %d when we're setting %d\n", num, (i / (Nchars / Nints)));
+	//    num += (curr[g] << (g * 8));
+	    //printf("curr is %c num is %d when we're setting %d\n", (char) curr[g], num, (i / (Nchars / Nints)));	
+	//} 
+	Z[t / (Nchars / Nints)] = num;
+//	printf("%d\n", num);
+	//num = 0;
+//	printf("%d z entry in slot %d \n", Z[i /(Nchars /  Nints)], i / (Nchars / Nints));
+     //}
      //curr[(i % (Nchars / Nints))] = string[i]; 
   }
   free(curr);
