@@ -73,7 +73,7 @@ __global__ void  kernelMandelbrot(int Nre, int Nim, complex_t cmin, complex_t cm
   int bSizex = blockDim.x;
   int bSizey = blockDim.y;
 
-  int n,m;
+//  int n,m;
 
   complex_t c;
 
@@ -109,6 +109,7 @@ int main(int argc, char **argv){
   int Nre = atoi(argv[1]);
   int Nim = atoi(argv[2]);
   int Nthreads = Nre * Nim; //atoi(argv[3]);
+  int N = Nre * Nim;
 
   // Q2b: set the number of threads per block and the number of blocks here:
   float *fltArray;
@@ -121,8 +122,8 @@ int main(int argc, char **argv){
   Gx = Nblocks;
   Gy = Nblocks;
 
-  dim3 block = {Bx, By, 1}; // Bx * By threads in thread-block
-  dim3 grid = {Gx, Gy, 1}; // Gx * Gy grid of thread-blocks 
+  dim3 block(Bx, By, 1); // Bx * By threads in thread-block
+  dim3 grid(Gx, Gy, 1); // Gx * Gy grid of thread-blocks 
 
   // storage for the iteration counts
   float *count = (float*) malloc(Nre*Nim*sizeof(float));
@@ -148,7 +149,7 @@ int main(int argc, char **argv){
   
   // print elapsed time
   printf("elapsed = %f\n", ((double)(end-start))/CLOCKS_PER_SEC);
-  cudaMemcpy(count, Nthreads * sizeof(float), cudaMemcpyDeviceToHost);
+  cudaMemcpy(fltArray, count, Nthreads * sizeof(float), cudaMemcpyDeviceToHost);
 
   // output mandelbrot to png format image
   FILE *fp = fopen("mandelbrot.png", "w");

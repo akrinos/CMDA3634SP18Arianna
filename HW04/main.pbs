@@ -1,22 +1,23 @@
 #! /bin/bash
 #
 #PBS -l walltime=00:10:00
-#PBS -l nodes=1:ppn=16
+#PBS -l nodes=1:ppn=21
 #PBS -W group_list=newriver
-#PBS -q open_q
+#PBS -q p100_dev_q
+#PBS -A CMDA3634SP18
 #PBS -j oe
 
-#cd $PBS_O_WORKDIR
+cd $PBS_O_WORKDIR
 
-#module purge
-#module load gcc cuda
+module purge
+module load gcc
 
 make
 
-for ((Nthreads=1;Nthreads<=64;Nthreads+=4))
+for ((Nthreads=1;Nthreads<=20;Nthreads++))
 do 
     echo Nthreads=$Nthreads
-    ./mandelbrot 4096 4096 $Nthreads;
+    ./main $Nthreads;
 done;
 
 
