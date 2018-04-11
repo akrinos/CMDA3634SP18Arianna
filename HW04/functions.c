@@ -194,18 +194,19 @@ void ElGamalDecrypt(unsigned int *m, unsigned int *a, unsigned int Nints,
 void padString(unsigned char* string, unsigned int charsPerInt) {
 
   /* Q1.2 Complete this function   */
-  //printf("%d is string length, %d is charsPerInt\n", strlen(string), charsPerInt);
+  printf("%d is string length, %d is charsPerInt\n", strlen(string), charsPerInt);
   int numChars = strlen(string);
   numChars += (numChars % charsPerInt);
   int neededPad = numChars - strlen(string);
   //unsigned char* replacement = malloc(numChars + 1); // extra for the pad 
   //strcpy(replacement, string);
-  realloc(string, numChars + 1);
+  realloc(string, (numChars + 1)*sizeof(char));
+  //printf("%d and %d\n", numChars),strlen(string);
   for (int i = 0; i < neededPad; i++) {
 	string[strlen(string) + i] = ' ';
-	//printf("added pad\n");	
+	//printf("added pad for needed pad %d and %d and %d\n",neededPad,numChars, strlen(string));	
   }
-  string[strlen(string) + neededPad] = '\0';
+  string[numChars] = '\0';
   //printf("%s the replacement\n", string);
 }
 
@@ -251,7 +252,7 @@ void convertZToString(unsigned int  *Z,      unsigned int Nints,
   //#pragma omp parallel for shared(globalCtr,string,t)
   for (int i = 0; i < Nints; i++) {
   	currInt = Z[i];
-	#pragma omp parallel for shared(globalCtr)
+	#pragma omp parallel for
  	for (t = ratio - 1; t >= 0; t--) {
 //		printf("currInt is %c and we are at pos %d\n",(char)  currInt >> (t * 8), globalCtr);
 		int val = t * 8;

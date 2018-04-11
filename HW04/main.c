@@ -27,7 +27,7 @@ int main (int argc, char **argv) {
 
  // printf("Enter a number of bits: "); fflush(stdout);
  // char status = scanf("%u",&n);
-  n = 10;  
+  n = 18;  
 
   //make sure the input makes sense
   if ((n<9)||(n>31)) {//Updated bounds. 8 is no good (need to encode chars)
