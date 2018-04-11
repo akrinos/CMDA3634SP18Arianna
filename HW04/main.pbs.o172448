@@ -1,0 +1,338 @@
+make: Nothing to be done for `all'.
+Nthreads=1
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (360,101) (602,625) (551,48) (806,755) (725,18) (793,674) (552,336) (248,256) (403,161) (149,544) (732,592) (795,205) (352,69) (447,424) (157,303) (177,436) (684,815) (602,625) (317,270) (419,295) (420,175) (777,67) (291,84) (595,702) (66,266) (260,753) (290,404) (843,262) (692,391) (834,157) (278,306) (744,592) (845,21) (224,385) (378,583) (42,179) (224,748) (34,492) (732,524) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 1 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 8.2422e-05 seconds, throughput was 1.04705e+07 values tested per second.
+Nthreads=2
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (625,785) (141,311) (137,336) (559,851) (102,192) (95,412) (278,203) (646,424) (367,436) (417,287) (770,510) (28,295) (822,67) (741,702) (361,204) (654,106) (275,724) (143,463) (412,306) (88,21) (772,560) (97,301) (374,255) (591,674) (369,256) (46,359) (157,303) (17,270) (820,175) (126,84) (280,266) (14,719) (732,592) (224,385) (378,583) (42,179) (224,748) (34,492) (732,524) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 2 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 0.000103031 seconds, throughput was 8.37613e+06 values tested per second.
+Nthreads=3
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (589,127) (131,18) (361,169) (850,161) (413,698) (788,462) (476,815) (119,631) (212,60) (600,53) (592,717) (304,183) (529,492) (143,690) (79,755) (379,491) (383,270) (43,189) (242,625) (821,529) (804,790) (641,5) (46,179) (72,748) (34,492) (369,524) (532,499) (399,124) (722,256) (40,95) (598,370) (190,56) (198,649) (388,396) (814,610) (75,737) (808,255) (291,352) (743,583) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 3 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 8.44002e-05 seconds, throughput was 1.02251e+07 values tested per second.
+Nthreads=4
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (542,540) (808,253) (476,11) (200,516) (302,235) (860,242) (467,51) (337,549) (705,89) (80,410) (805,417) (748,89) (138,56) (684,738) (373,547) (333,122) (9,641) (441,827) (297,266) (165,646) (782,553) (547,230) (95,15) (223,733) (813,575) (326,419) (555,528) (790,476) (493,587) (338,293) (683,854) (254,27) (441,321) (279,469) (221,650) (321,484) (782,73) (682,550) (563,172) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 4 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 8.4192e-05 seconds, throughput was 1.02504e+07 values tested per second.
+Nthreads=5
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (356,745) (408,465) (319,430) (240,749) (800,665) (792,601) (71,345) (685,335) (525,34) (78,741) (685,294) (678,697) (831,828) (519,262) (862,241) (633,238) (617,440) (380,50) (419,594) (171,387) (99,784) (533,787) (670,695) (246,831) (122,387) (141,311) (455,132) (233,811) (135,694) (136,390) (66,18) (655,230) (440,232) (80,671) (378,583) (476,46) (481,810) (759,311) (434,858) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 5 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 8.70633e-05 seconds, throughput was 9.91233e+06 values tested per second.
+Nthreads=6
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (829,422) (30,191) (421,629) (235,666) (264,801) (619,629) (547,242) (814,466) (729,320) (537,15) (640,295) (803,298) (770,133) (147,503) (386,282) (18,161) (781,426) (472,346) (245,542) (494,410) (739,626) (458,288) (762,800) (171,208) (219,733) (684,135) (339,43) (415,641) (64,272) (269,485) (744,463) (498,442) (712,396) (89,851) (265,555) (493,192) (147,61) (153,693) (444,358) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 6 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 0.000104376 seconds, throughput was 8.26818e+06 values tested per second.
+Nthreads=7
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (794,693) (528,183) (247,146) (116,328) (822,749) (19,756) (281,722) (408,648) (530,333) (381,306) (696,629) (720,137) (776,530) (292,535) (292,713) (17,16) (370,824) (847,102) (202,753) (545,101) (860,55) (617,139) (682,347) (541,76) (600,441) (185,239) (182,327) (821,320) (786,305) (540,30) (321,827) (317,270) (219,577) (338,523) (678,65) (506,223) (821,172) (389,725) (732,524) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 7 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 1.15847e-05 seconds, throughput was 7.44947e+07 values tested per second.
+Nthreads=8
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (132,202) (353,701) (314,682) (727,413) (510,406) (857,571) (39,519) (591,334) (713,492) (170,524) (511,261) (668,224) (453,850) (277,859) (129,172) (210,450) (2,145) (336,774) (489,257) (190,22) (304,591) (849,522) (150,229) (319,549) (703,726) (400,276) (377,806) (371,318) (619,180) (627,510) (721,729) (522,573) (98,665) (850,382) (568,77) (446,576) (550,101) (565,757) (170,361) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 8 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 2.33753e-05 seconds, throughput was 3.69194e+07 values tested per second.
+Nthreads=9
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (353,816) (217,335) (684,489) (281,302) (86,446) (460,590) (294,382) (545,792) (799,151) (532,205) (310,580) (593,746) (509,602) (208,245) (492,229) (269,365) (856,217) (295,469) (153,492) (455,545) (353,701) (548,748) (517,460) (1,606) (401,405) (608,749) (126,84) (110,42) (608,585) (588,452) (671,769) (133,401) (207,89) (95,748) (801,524) (340,245) (135,405) (80,448) (769,22) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 9 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 3.2722e-05 seconds, throughput was 2.63737e+07 values tested per second.
+Nthreads=10
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (244,229) (643,487) (623,114) (739,810) (56,178) (709,186) (28,295) (468,193) (507,252) (815,564) (817,684) (265,375) (190,234) (391,640) (103,322) (674,8) (522,770) (689,128) (276,620) (31,852) (788,105) (753,303) (167,234) (360,467) (423,836) (556,397) (122,342) (490,183) (575,101) (126,84) (681,81) (375,672) (293,706) (40,632) (675,766) (687,335) (480,672) (841,629) (178,8) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 10 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 3.97791e-05 seconds, throughput was 2.16948e+07 values tested per second.
+Nthreads=11
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (251,763) (96,831) (253,41) (596,115) (506,329) (210,414) (586,507) (638,237) (821,85) (288,483) (146,792) (363,38) (719,619) (729,258) (60,565) (843,642) (70,377) (524,328) (146,278) (834,524) (59,73) (399,215) (525,556) (812,25) (832,713) (27,104) (803,298) (536,683) (83,509) (636,93) (431,53) (314,476) (21,620) (784,19) (748,615) (84,754) (97,637) (310,499) (182,47) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 11 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 4.49577e-05 seconds, throughput was 1.91958e+07 values tested per second.
+Nthreads=12
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (588,387) (100,815) (387,852) (779,345) (399,166) (344,168) (249,343) (177,436) (416,210) (769,675) (106,70) (7,474) (144,244) (190,203) (410,99) (68,771) (308,777) (247,718) (501,490) (618,835) (308,134) (640,295) (86,796) (34,202) (112,380) (649,785) (611,244) (509,105) (588,344) (242,625) (230,83) (141,346) (61,369) (706,546) (474,557) (227,197) (249,667) (75,759) (355,147) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 12 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 4.98751e-05 seconds, throughput was 1.73032e+07 values tested per second.
+Nthreads=13
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (431,795) (514,403) (540,101) (157,416) (743,800) (803,559) (25,246) (247,132) (238,503) (671,209) (537,356) (355,325) (97,466) (179,125) (323,833) (630,246) (10,837) (251,96) (369,447) (752,474) (369,524) (207,89) (287,734) (204,791) (826,375) (721,31) (565,388) (832,191) (217,393) (687,626) (684,530) (663,761) (858,318) (303,668) (493,592) (529,492) (103,679) (727,240) (62,536) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 13 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 5.40828e-05 seconds, throughput was 1.5957e+07 values tested per second.
+Nthreads=14
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (582,157) (669,402) (80,23) (502,694) (518,704) (42,81) (853,842) (372,387) (399,842) (231,136) (21,620) (678,697) (94,188) (220,387) (786,471) (386,577) (212,60) (669,402) (561,788) (602,845) (375,614) (473,518) (30,814) (125,29) (591,659) (75,758) (134,524) (312,308) (732,592) (153,492) (702,469) (343,845) (823,195) (821,850) (629,687) (33,437) (324,204) (452,335) (604,167) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 14 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 1.18022e-05 seconds, throughput was 7.31221e+07 values tested per second.
+Nthreads=15
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (256,398) (296,180) (382,673) (781,83) (736,861) (320,705) (707,611) (717,31) (304,20) (832,117) (258,182) (134,524) (774,298) (669,299) (172,843) (42,13) (468,796) (807,14) (166,577) (52,139) (378,764) (62,151) (623,315) (176,353) (264,628) (205,258) (818,544) (99,425) (507,9) (261,595) (414,483) (108,231) (807,19) (21,137) (67,42) (169,728) (36,390) (766,177) (17,131) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 15 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 1.87759e-05 seconds, throughput was 4.59631e+07 values tested per second.
+Nthreads=16
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (163,725) (9,85) (473,245) (87,286) (353,457) (684,594) (182,327) (437,859) (850,556) (517,543) (20,534) (472,2) (447,493) (530,166) (555,528) (375,310) (823,282) (725,241) (659,860) (311,731) (531,317) (94,377) (86,796) (752,228) (86,48) (64,155) (475,656) (360,467) (280,670) (241,750) (718,15) (619,377) (794,616) (361,803) (290,736) (275,577) (80,416) (716,399) (389,438) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 16 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 2.30921e-05 seconds, throughput was 3.7372e+07 values tested per second.
+Nthreads=17
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (229,228) (841,411) (832,497) (619,435) (423,720) (719,256) (639,446) (153,566) (4,524) (86,722) (476,689) (195,639) (118,288) (276,90) (803,298) (431,815) (446,117) (324,375) (377,806) (282,430) (828,9) (77,558) (16,478) (54,126) (814,351) (208,771) (661,110) (408,579) (438,502) (374,606) (607,31) (152,800) (345,783) (763,117) (586,129) (319,386) (304,142) (66,266) (216,756) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 17 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 2.91951e-05 seconds, throughput was 2.95598e+07 values tested per second.
+Nthreads=18
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (204,646) (24,756) (822,410) (60,320) (38,327) (28,174) (657,360) (302,181) (460,702) (298,228) (341,404) (709,851) (247,689) (328,257) (852,771) (741,659) (314,849) (114,700) (750,637) (245,28) (496,579) (203,755) (464,648) (120,307) (701,524) (804,790) (171,279) (414,483) (176,104) (142,354) (626,240) (240,419) (820,175) (699,694) (62,339) (13,582) (7,99) (619,631) (76,203) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 18 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 3.25697e-05 seconds, throughput was 2.6497e+07 values tested per second.
+Nthreads=19
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (674,299) (173,177) (764,593) (24,322) (743,800) (846,365) (620,727) (245,399) (337,659) (177,759) (654,549) (746,96) (831,828) (347,241) (103,322) (27,685) (635,172) (516,640) (309,130) (368,763) (429,69) (695,206) (492,75) (193,703) (732,426) (499,232) (746,96) (473,82) (353,150) (287,262) (686,841) (150,331) (104,524) (18,161) (87,811) (106,289) (401,561) (72,506) (209,103) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 19 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 3.58312e-05 seconds, throughput was 2.40851e+07 values tested per second.
+Nthreads=20
+
+ElGamal Setup successful.
+p = 863. 
+g = 711 is a generator of Z_863 
+Secret key: x = 131 
+h = g^x = 89
+
+Message = "Hello, this is the message as a string."
+Padded Message = "Hello, this is the message as a string."
+The encrypted text is:  (611,186) (417,383) (78,271) (43,512) (4,214) (321,624) (242,625) (115,280) (123,10) (601,260) (159,598) (819,529) (195,790) (726,843) (50,395) (783,192) (147,276) (369,524) (390,363) (342,232) (218,473) (589,17) (196,82) (153,274) (407,247) (356,493) (605,664) (474,204) (229,778) (673,807) (197,833) (476,815) (442,692) (624,680) (603,407) (299,161) (550,101) (496,105) (691,726) ]
+Decrypted Message = "Hello, this is the message as a string."
+
+Using 20 OpenMP threads to find the secret key...
+Secret key found! x = 130 
+Searching all keys took 3.92399e-05 seconds, throughput was 2.19929e+07 values tested per second.
+
+Usage:
+ kill [options] <pid|name> [...]
+
+Options:
+ -a, --all              do not restrict the name-to-pid conversion to processes
+                        with the same uid as the present process
+ -s, --signal <sig>     send specified signal
+ -q, --queue <sig>      use sigqueue(2) rather than kill(2)
+ -p, --pid              print pids without signaling them
+ -l, --list [=<signal>] list signal names, or convert one to a name
+ -L, --table            list signal names and numbers
+
+ -h, --help     display this help and exit
+ -V, --version  output version information and exit
+
+For more details see kill(1).

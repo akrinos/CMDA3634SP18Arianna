@@ -257,17 +257,17 @@ void convertZToString(unsigned int  *Z,      unsigned int Nints,
   int ratio = Nchars / Nints;
   int t;
 //  printf("%d numints AND ration %d \n", Nints, ratio);
-  //#pragma omp parallel for shared(globalCtr,string,t)
+  #pragma omp parallel for shared(string)
   for (int i = 0; i < Nints; i++) {
   	currInt = Z[i];
-	#pragma omp parallel for
+	//#pragma omp parallel for
  	for (t = ratio - 1; t >= 0; t--) {
 //		printf("currInt is %c and we are at pos %d\n",(char)  currInt >> (t * 8), globalCtr);
 		int val = t * 8;
-		string[globalCtr + t] = (char) (currInt >> val); 
+		string[(ratio * i) + t] = (char) (currInt >> val); 
 		currInt -= ((currInt >> val) << val);
 	}
-	globalCtr += ratio;
+	//globalCtr += ratio;
   }
   int g = Nchars-1;
   while (string[g] == ' ') {
