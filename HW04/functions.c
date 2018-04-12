@@ -261,7 +261,7 @@ char* cypherToString(unsigned int *m, unsigned int *a, int length) {
 	// unsigned int is 32 bits 
 	//unsigned int length = sizeof(m) / sizeof(unsigned int); // number of ints we have in m 
 	// size of m should match size of a
-	// we need 2*m*32 bytes for the string 
+	// we need 4*length(m) bytes for the string 
 	// We could do this in less space if we used inputted bitsize
 	unsigned int fullSize = length * 2;
 	int ratio = 2;
@@ -272,14 +272,16 @@ char* cypherToString(unsigned int *m, unsigned int *a, int length) {
 		i = i / 2;
 		//printf("i is %d and m[i] is %u and a[i] is %u\n", i, m[i], a[i]);
 		currInt = m[i] & 0xFF;
-		//currInt &= ((m[i] >> 8) << 8); // lower bits only
 		finalString[counter] =  (m[i] >> 8) + '0';
-		//printf("%c the char and %c\n", (m[i] >> 8) + '0', currInt + '0');
 		finalString[counter+1] = currInt + '0';
 		currInt = a[i] & 0xFF;
-		//currInt -= ((a[i] >> 8) << 8);
 		finalString[counter+2] =( a[i] >> 8) + '0';
 		finalString[counter+3] = currInt + '0';
+		// Note: we can convert all of these characters back by adding '0'
+		// (or casting), then if the resulting integer is negative, adding 256
+		// to the value we retrieve. 
+
+		//printf("%d and %c and %c and %d\n", currInt, currInt + '0', 250 + '0', (int) (finalString[counter+1] - '0'));	
 		counter+=4;
 		i = i * 2;
 	}
