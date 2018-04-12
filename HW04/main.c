@@ -27,7 +27,7 @@ int main (int argc, char **argv) {
 
  // printf("Enter a number of bits: "); fflush(stdout);
  // char status = scanf("%u",&n);
-  n = 25;  
+  n = 15;  
 
   //make sure the input makes sense
   if ((n<9)||(n>31)) {//Updated bounds. 8 is no good (need to encode chars)
@@ -74,7 +74,9 @@ int main (int argc, char **argv) {
     printf("(%u,%u) ", Zmessage[i], a[i]);
   }
   printf("]\n");
-
+	
+  char * finalString = cypherToString(Zmessage, a, Nints);
+  printf("The encrypted numbers as a string: %s\n", finalString);
   //Decrypt the Zmessage with the ElGamal cyrptographic system
   ElGamalDecrypt(Zmessage,a,Nints,p,x);
 

@@ -194,12 +194,9 @@ void ElGamalDecrypt(unsigned int *m, unsigned int *a, unsigned int Nints,
 void padString(unsigned char* string, unsigned int charsPerInt) {
 
   /* Q1.2 Complete this function   */
-//  printf("%d is string length, %d is charsPerInt\n", strlen(string), charsPerInt);
   int numChars = strlen(string);
   numChars += (numChars % charsPerInt);
   int neededPad = numChars - strlen(string);
-  //unsigned char* replacement = malloc(numChars + 1); // extra for the pad 
-  //strcpy(replacement, string);
   realloc(string, (numChars + 1)*sizeof(char));
   //printf("%d and %d\n", numChars),strlen(string);
   for (int i = 0; i < neededPad; i++) {
@@ -224,22 +221,8 @@ void convertStringToZ(unsigned char *string, unsigned int Nchars,
      for (int i = (Nchars/Nints) - 1; i >= 0; i--) {
      	curr[i] = string[t - i];
      	num += curr[i] << ((((Nchars/Nints) - 1) - i) * 8);
-     //num += (curr[i % (Nchars / Nints)]) << ((i % (Nchars / Nints)) * 8);
-     }
-     //if ((i % (Nchars / Nints)) == (Nchars / Nints - 1)) {
-	//printf("%s\n", curr);
-	//int num = 0;
-	//for (int g = 0; g < Nchars / Nints; g++) {
-	    //printf("num is %d when we're setting %d\n", num, (i / (Nchars / Nints)));
-	//    num += (curr[g] << (g * 8));
-	    //printf("curr is %c num is %d when we're setting %d\n", (char) curr[g], num, (i / (Nchars / Nints)));	
-	//} 
+     } 
 	Z[t / (Nchars / Nints)] = num;
-//	printf("%d\n", num);
-	//num = 0;
-//	printf("%d z entry in slot %d \n", Z[i /(Nchars /  Nints)], i / (Nchars / Nints));
-     //}
-     //curr[(i % (Nchars / Nints))] = string[i]; 
   }
   free(curr);
 }
@@ -256,18 +239,15 @@ void convertZToString(unsigned int  *Z,      unsigned int Nints,
   int globalCtr = 0;
   int ratio = Nchars / Nints;
   int t;
-//  printf("%d numints AND ration %d \n", Nints, ratio);
   #pragma omp parallel for shared(string)
   for (int i = 0; i < Nints; i++) {
   	currInt = Z[i];
-	//#pragma omp parallel for
  	for (t = ratio - 1; t >= 0; t--) {
 //		printf("currInt is %c and we are at pos %d\n",(char)  currInt >> (t * 8), globalCtr);
 		int val = t * 8;
 		string[(ratio * i) + t] = (char) (currInt >> val); 
 		currInt -= ((currInt >> val) << val);
 	}
-	//globalCtr += ratio;
   }
   int g = Nchars-1;
   while (string[g] == ' ') {
@@ -276,3 +256,34 @@ void convertZToString(unsigned int  *Z,      unsigned int Nints,
   string[g+1] = '\0'; // g + 1 to get rid of pad 
 }
 
+/* convert cyphertext to a string */
+char* cypherToString(unsigned int *m, unsigned int *a, int length) {
+	// unsigned int is 32 bits 
+	//unsigned int length = sizeof(m) / sizeof(unsigned int); // number of ints we have in m 
+	// size of m should match size of a
+	// we need 2*m*32 bytes for the string 
+	// We could do this in less space if we used inputted bitsize
+	unsigned int fullSize = length * 2;
+	int ratio = 2;
+	int currInt = m[0];
+	char * finalString = malloc((length * 4 + 1) * sizeof(char)); 
+	int counter = 0;
+	for (int i = 0; i < length * 2; i+=2) {
+		i = i / 2;
+		//printf("i is %d and m[i] is %u and a[i] is %u\n", i, m[i], a[i]);
+		currInt = m[i] & 0xFF;
+		//currInt &= ((m[i] >> 8) << 8); // lower bits only
+		finalString[counter] =  (m[i] >> 8) + '0';
+		//printf("%c the char and %c\n", (m[i] >> 8) + '0', currInt + '0');
+		finalString[counter+1] = currInt + '0';
+		currInt = a[i] & 0xFF;
+		//currInt -= ((a[i] >> 8) << 8);
+		finalString[counter+2] =( a[i] >> 8) + '0';
+		finalString[counter+3] = currInt + '0';
+		counter+=4;
+		i = i * 2;
+	}
+	finalString[length * 4 + 1] = '\0';
+	//printf("we came up with %s\n", finalString);
+	return finalString;
+}
