@@ -77,6 +77,7 @@ int main (int argc, char **argv) {
 	
   char * finalString = cypherToString(Zmessage, a, Nints);
   printf("The encrypted numbers as a string: %s\n", finalString);
+  convertStringBack(finalString);
   //Decrypt the Zmessage with the ElGamal cyrptographic system
   ElGamalDecrypt(Zmessage,a,Nints,p,x);
 

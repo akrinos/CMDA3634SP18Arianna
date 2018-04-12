@@ -280,12 +280,34 @@ char* cypherToString(unsigned int *m, unsigned int *a, int length) {
 		// Note: we can convert all of these characters back by adding '0'
 		// (or casting), then if the resulting integer is negative, adding 256
 		// to the value we retrieve. 
-
-		//printf("%d and %c and %c and %d\n", currInt, currInt + '0', 250 + '0', (int) (finalString[counter+1] - '0'));	
+		currInt = m[i] & 0xFF;
+	//	printf("%d and %c and %c and %d\n", currInt, currInt + '0', 250 + '0', (int) (finalString[counter+1] - '0'));	
 		counter+=4;
 		i = i * 2;
 	}
 	finalString[length * 4 + 1] = '\0';
 	//printf("we came up with %s\n", finalString);
 	return finalString;
+
+}
+
+void convertStringBack(char* final){
+    int counter = 0;
+    while (final[counter] != '\0') {
+	int upper = (int) (final[counter] - '0');
+	int lower = (int) (final[counter+1] - '0');
+	if (upper < 0) {
+		upper +=256;
+	} 
+	if (lower < 0) {
+		lower +=256;
+	}
+	int number = (upper << 8) + lower;
+	if (counter % 4 == 0) { //we're at an m
+		printf("message (mhat,a) is (%d, ",number);
+	} else {
+		printf("%d) \n", number);
+	}
+	counter+=2;
+    }
 }
