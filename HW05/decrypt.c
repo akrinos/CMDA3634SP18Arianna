@@ -21,6 +21,32 @@ int main (int argc, char **argv) {
 
   /* Q3 Complete this function. Read in the public key data from public_key.txt
     and the cyphertexts from messages.txt. */
+  FILE * key; 
+  key = fopen("public_key.txt", "r");
+  char * currLine = NULL; size_t length = 0;
+  getline(&currLine, &length, key);
+  n = atoi(currLine); currLine = NULL;
+  getline(&currLine, &length, key);
+  p = atoi(currLine); currLine = NULL;
+  getline(&currLine, &length, key);
+  g = atoi(currLine), currLine = NULL;
+  getline(&currLine, &length, key);
+  h = atoi(currLine); fclose(key); 
+
+  FILE * messge;
+  messge = fopen("message.txt", "r");
+  currLine = NULL; length = 0;
+  getline(&currLine, &length, key);
+  int numEnt = atoi(currLine); currLine = NULL;
+  unsigned int * m = malloc(numEnt * sizeof(unsigned int));
+  unsigned int * a = malloc(numEnt * sizeof(unsigned int));
+  for (int i = 0; i < numEnt; i++) {
+	getline(&currLine, &length, key);
+	m[i] = atoi(strtok(currLine, " "));
+	a[i] = atoi(strtok(NULL, " ")); 
+//	printf("we've got %d and %d\n", m[i],a[i]);
+	currLine = NULL; 
+  } 
 
   // find the secret key
   if (x==0 || modExp(g,x,p)!=h) {
@@ -42,6 +68,13 @@ int main (int argc, char **argv) {
   }
 
   /* Q3 After finding the secret key, decrypt the message */
-
+  // Feed in [m] and [a] to the decrypt function 
+  Nints = numEnt;
+  unsigned int Nchars = numEnt * ((n - 1) / 8);
+  ElGamalDecrypt(m, a, Nints, p, x);
+  printf("decrypted %d and nchars %d and Nints %d \n", m[0], Nchars, Nints);
+  char * final = malloc(Nchars * sizeof(char));
+  convertZToString(m, Nints, final, Nchars);
+  printf("%s\n", final); 
   return 0;
 }
