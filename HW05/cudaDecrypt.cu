@@ -8,9 +8,9 @@
 #include "cuda.h"
 #include "functions.c"
 
-__device__ void calculate(g, id + 1, p, sharVar) {
-	if 	
-}
+//__device__ void calculate(g, id + 1, p, sharVar) {
+//	if 	
+//}
 
 __global__ void findTheX(unsigned int *xres, unsigned int p, unsigned int h, unsigned int g) {
 	__shared__ int sharVar;
@@ -60,8 +60,8 @@ int main (int argc, char **argv) {
   currLine = NULL; length = 0;
   getline(&currLine, &length, key);
   int numEnt = atoi(currLine); currLine = NULL;
-  unsigned int * m = malloc(numEnt * sizeof(unsigned int));
-  unsigned int * a = malloc(numEnt * sizeof(unsigned int));
+  unsigned int * m = (unsigned int *) malloc(numEnt * sizeof(unsigned int));
+  unsigned int * a = (unsigned int *) malloc(numEnt * sizeof(unsigned int));
   for (int i = 0; i < numEnt; i++) {
 	getline(&currLine, &length, key);
 	m[i] = atoi(strtok(currLine, " "));
@@ -91,7 +91,7 @@ int main (int argc, char **argv) {
     int Nthreads = 128;
     int Nblocks = (p - 1 + 128 - 1) / 128;
     // p, g, and h are just constants 
-    reduction <<Nthreads, Nblocks>> = findTheX(x_res, p, h, g);
+    findTheX <<<Nthreads, Nblocks>>> (x_res, p, h, g);
     // Hopefully by this point we've found the x 
     cudaMemcpy(&x, x_res, 1*sizeof(unsigned int), cudaMemcpyDeviceToHost);
     double endTime = clock();
@@ -108,11 +108,9 @@ int main (int argc, char **argv) {
   Nints = numEnt;
   unsigned int Nchars = numEnt * ((n - 1) / 8);
   ElGamalDecrypt(m, a, Nints, p, x);
-  char * final = malloc(Nchars * sizeof(char));
+  unsigned char * final = (unsigned char *) malloc(Nchars * sizeof(char));
   convertZToString(m, Nints, final, Nchars);
   // printf("%s\n", final); 
   return 0;
   /* Q4 Make the search for the secret key parallel on the GPU using CUDA. */
-
-  return 0;
 }
