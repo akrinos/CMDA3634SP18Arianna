@@ -12,7 +12,7 @@ __device__ void calculate(g, id + 1, p, sharVar) {
 	if 	
 }
 
-__global__ void findTheX(unsigned int p, unsigned int h, unsigned int g) {
+__global__ void findTheX(unsigned int *xres, unsigned int p, unsigned int h, unsigned int g) {
 	__shared__ int sharVar;
 	int threadid = threadIdx.x; //thread number
 	int blockid = blockIdx.x; //block number
@@ -20,6 +20,10 @@ __global__ void findTheX(unsigned int p, unsigned int h, unsigned int g) {
 
 	int id = threadid + blockid*Nblock;
 	bool result = (modExp(g,id+1,p)==h);
+	if (result) {
+		*xres = id + 1;
+		__syncthreads();
+	}
 }
 
 int main (int argc, char **argv) {
@@ -70,12 +74,26 @@ int main (int argc, char **argv) {
   if (x==0 || modExp(g,x,p)!=h) {
     printf("Finding the secret key...\n");
     double startTime = clock();
-    for (unsigned int i=0;i<p-1;i++) {
-      if (modExp(g,i+1,p)==h) {
-        printf("Secret key found! x = %u \n", i+1);
-        x=i+1;
-      } 
-    }
+    unsigned int *x_res;
+    cudaMalloc(&x_res, 1*sizeof(unsigned int));
+    //for (unsigned int i=0;i<p-1;i++) {
+      //if (modExp(g,i+1,p)==h) {
+      //  printf("Secret key found! x = %u \n", i+1);
+      //  x=i+1;
+      //} 
+    //}
+    // the number of blocks we have corresponds to independent
+    // executions in parallel - our design, we are skipping forward
+    // by multiples so that 
+    //dim3 B(128, 1, 1);
+    //dim3 G((N + 128 - 1) / 128, 1, 1);
+
+    int Nthreads = 128;
+    int Nblocks = (p - 1 + 128 - 1) / 128;
+    // p, g, and h are just constants 
+    reduction <<Nthreads, Nblocks>> = findTheX(x_res, p, h, g);
+    // Hopefully by this point we've found the x 
+    cudaMemcpy(&x, x_res, 1*sizeof(unsigned int), cudaMemcpyDeviceToHost);
     double endTime = clock();
 
     double totalTime = (endTime-startTime)/CLOCKS_PER_SEC;
