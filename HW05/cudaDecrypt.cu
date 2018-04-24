@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <string.h>
 #include <time.h>
 #include <stdbool.h>
 
@@ -9,7 +8,7 @@
 #include "functions.c"
 
 //compute a*b mod p safely
-__device__ unsigned int modprod(unsigned int a, unsigned int b, unsigned int p) {
+__device__ unsigned int modprodCuda(unsigned int a, unsigned int b, unsigned int p) {
   unsigned int za = a;
   unsigned int ab = 0;
 
@@ -22,13 +21,13 @@ __device__ unsigned int modprod(unsigned int a, unsigned int b, unsigned int p) 
 }
 
 //compute a^b mod p safely
-__device__ unsigned int modExp(unsigned int a, unsigned int b, unsigned int p) {
+__device__ unsigned int modExpCuda(unsigned int a, unsigned int b, unsigned int p) {
   unsigned int z = a;
   unsigned int aExpb = 1;
 
   while (b > 0) {
-    if (b%2 == 1) aExpb = modprod(aExpb, z, p);
-    z = modprod(z, z, p);
+    if (b%2 == 1) aExpb = modprodCuda(aExpb, z, p);
+    z = modprodCuda(z, z, p);
     b /= 2;
   }
   return aExpb;
@@ -41,7 +40,7 @@ __global__ void findTheX(unsigned int *xres, unsigned int p, unsigned int h, uns
 	int Nblock = blockDim.x;  //number of threads in a block
 
 	int id = threadid + blockid*Nblock;
-	bool result = (modExp(g,id+1,p)==h);
+	bool result = (modExpCuda(g,id+1,p)==h);
 	if (result) {
 		*xres = id + 1;
 		__syncthreads();
@@ -98,12 +97,21 @@ int main (int argc, char **argv) {
     double startTime = clock();
     unsigned int *x_res;
     cudaMalloc(&x_res, 1*sizeof(unsigned int));
-    //for (unsigned int i=0;i<p-1;i++) {
-      //if (modExp(g,i+1,p)==h) {
-      //  printf("Secret key found! x = %u \n", i+1);
-      //  x=i+1;
-      //} 
-    //}
+    for (unsigned int i=0;i<p-1;i++) {
+      if (modExp(g,i+1,p)==h) {
+        printf("Secret key found by loop! x = %u \n", i+1);
+        x=i+1;
+      } 
+    }
+    double ending = clock();
+
+    double totalTime = (ending-startTime)/CLOCKS_PER_SEC;
+    double work = (double) p;
+    double throughput = work/totalTime;
+
+    printf("Searching all keys took %g seconds, throughput was %g values tested per second.\n", totalTime, throughput);
+    
+    double starting = clock();
     // the number of blocks we have corresponds to independent
     // executions in parallel - our design, we are skipping forward
     // by multiples so that 
@@ -115,14 +123,15 @@ int main (int argc, char **argv) {
     // p, g, and h are just constants 
     findTheX <<<Nthreads, Nblocks>>> (x_res, p, h, g);
     // Hopefully by this point we've found the x 
-    cudaMemcpy(&x, x_res, 1*sizeof(unsigned int), cudaMemcpyDeviceToHost);
+    unsigned int result;
+    cudaMemcpy(&result, x_res, 1*sizeof(unsigned int), cudaMemcpyDeviceToHost);
     double endTime = clock();
 
-    double totalTime = (endTime-startTime)/CLOCKS_PER_SEC;
-    double work = (double) p;
-    double throughput = work/totalTime;
+    double totalTimec = (endTime-starting)/CLOCKS_PER_SEC;
+    double workc = (double) p;
+    double throughputc = workc/totalTimec;
 
-    printf("Searching all keys took %g seconds, throughput was %g values tested per second.\n", totalTime, throughput);
+    printf("Searching all keys using cuda took %g seconds, throughput was %g values tested per second.\n", totalTimec, throughputc);
   }
 
   /* Q3 After finding the secret key, decrypt the message */
@@ -132,7 +141,7 @@ int main (int argc, char **argv) {
   ElGamalDecrypt(m, a, Nints, p, x);
   unsigned char * final = (unsigned char *) malloc(Nchars * sizeof(char));
   convertZToString(m, Nints, final, Nchars);
-  // printf("%s\n", final); 
+  printf("%s\n", final); 
   return 0;
   /* Q4 Make the search for the secret key parallel on the GPU using CUDA. */
 }
