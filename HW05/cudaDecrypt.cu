@@ -8,9 +8,31 @@
 #include "cuda.h"
 #include "functions.c"
 
-//__device__ void calculate(g, id + 1, p, sharVar) {
-//	if 	
-//}
+//compute a*b mod p safely
+__device__ unsigned int modprod(unsigned int a, unsigned int b, unsigned int p) {
+  unsigned int za = a;
+  unsigned int ab = 0;
+
+  while (b > 0) {
+    if (b%2 == 1) ab = (ab +  za) % p;
+    za = (2 * za) % p;
+    b /= 2;
+  }
+  return ab;
+}
+
+//compute a^b mod p safely
+__device__ unsigned int modExp(unsigned int a, unsigned int b, unsigned int p) {
+  unsigned int z = a;
+  unsigned int aExpb = 1;
+
+  while (b > 0) {
+    if (b%2 == 1) aExpb = modprod(aExpb, z, p);
+    z = modprod(z, z, p);
+    b /= 2;
+  }
+  return aExpb;
+}
 
 __global__ void findTheX(unsigned int *xres, unsigned int p, unsigned int h, unsigned int g) {
 	__shared__ int sharVar;
