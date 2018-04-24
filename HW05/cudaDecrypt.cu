@@ -3,10 +3,24 @@
 #include <math.h>
 #include <string.h>
 #include <time.h>
+#include <stdbool.h>
 
 #include "cuda.h"
 #include "functions.c"
 
+__device__ void calculate(g, id + 1, p, sharVar) {
+	if 	
+}
+
+__global__ void findTheX(unsigned int p, unsigned int h, unsigned int g) {
+	__shared__ int sharVar;
+	int threadid = threadIdx.x; //thread number
+	int blockid = blockIdx.x; //block number
+	int Nblock = blockDim.x;  //number of threads in a block
+
+	int id = threadid + blockid*Nblock;
+	bool result = (modExp(g,id+1,p)==h);
+}
 
 int main (int argc, char **argv) {
 
