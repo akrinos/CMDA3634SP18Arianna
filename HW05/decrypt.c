@@ -22,7 +22,7 @@ int main (int argc, char **argv) {
   /* Q3 Complete this function. Read in the public key data from public_key.txt
     and the cyphertexts from messages.txt. */
   FILE * key; 
-  key = fopen("public_key.txt", "r");
+  key = fopen("bonus_public_key.txt", "r");
   char * currLine = NULL; size_t length = 0;
   getline(&currLine, &length, key);
   n = atoi(currLine); currLine = NULL;
@@ -34,7 +34,7 @@ int main (int argc, char **argv) {
   h = atoi(currLine); fclose(key); 
 
   FILE * messge;
-  messge = fopen("message.txt", "r");
+  messge = fopen("bonus_message.txt", "r");
   currLine = NULL; length = 0;
   getline(&currLine, &length, key);
   int numEnt = atoi(currLine); currLine = NULL;
