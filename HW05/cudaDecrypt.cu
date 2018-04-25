@@ -33,17 +33,17 @@ __device__ unsigned int modExpCuda(unsigned int a, unsigned int b, unsigned int 
   return aExpb;
 }
 
-__global__ void findTheX(unsigned int *xres, unsigned int p, unsigned int h, unsigned int g) {
-	__shared__ int sharVar;
+__global__ void findTheX(volatile unsigned int *xres, unsigned int p, unsigned int h, unsigned int g) {
 	int threadid = threadIdx.x; //thread number
 	int blockid = blockIdx.x; //block number
 	int Nblock = blockDim.x;  //number of threads in a block
-
-	int id = threadid + blockid*Nblock;
-	bool result = (modExpCuda(g,id+1,p)==h);
-	if (result) {
-		*xres = id + 1;
-		__syncthreads();
+	
+	unsigned int id = threadid + blockid*Nblock;
+	printf("hello from id %u \n", id);
+	if ((id < p) && modExpCuda(g,id+1,p)==h) {
+		*xres = id+1;
+		// bug: xres is getting set to number of blocks always 
+		//__syncthreads();
 	}
 }
 
@@ -94,9 +94,9 @@ int main (int argc, char **argv) {
   // find the secret key
   if (x==0 || modExp(g,x,p)!=h) {
     printf("Finding the secret key...\n");
+    // Comment the following lines if you don't want to do the full loop
+    
     double startTime = clock();
-    unsigned int *x_res;
-    cudaMalloc(&x_res, 1*sizeof(unsigned int));
     for (unsigned int i=0;i<p-1;i++) {
       if (modExp(g,i+1,p)==h) {
         printf("Secret key found by loop! x = %u \n", i+1);
@@ -112,6 +112,9 @@ int main (int argc, char **argv) {
     printf("Searching all keys took %g seconds, throughput was %g values tested per second.\n", totalTime, throughput);
     
     double starting = clock();
+    unsigned int *x_res;
+    cudaMalloc(&x_res, 1*sizeof(unsigned int));
+    cudaMemcpy(x_res, 0, 1 * sizeof(unsigned int), cudaMemcpyHostToDevice);
     // the number of blocks we have corresponds to independent
     // executions in parallel - our design, we are skipping forward
     // by multiples so that 
@@ -119,12 +122,16 @@ int main (int argc, char **argv) {
     //dim3 G((N + 128 - 1) / 128, 1, 1);
 
     int Nthreads = 128;
-    int Nblocks = (p - 1 + 128 - 1) / 128;
-    // p, g, and h are just constants 
-    findTheX <<<Nthreads, Nblocks>>> (x_res, p, h, g);
+    int Nblocks = (p + Nthreads - 1) / Nthreads;
+    // p, g, and h are just constants
+    printf("prevals: %d, %d, %d\n", *x_res, p, h); 
+    findTheX <<<Nblocks, Nthreads>>> (x_res, p, h, g);
+    cudaDeviceSynchronize();
     // Hopefully by this point we've found the x 
-    unsigned int result;
-    cudaMemcpy(&result, x_res, 1*sizeof(unsigned int), cudaMemcpyDeviceToHost);
+    unsigned int *result;
+    cudaMemcpy(result, x_res, 1*sizeof(unsigned int), cudaMemcpyDeviceToHost);
+    printf("We found the secret key as %d\n", result);
+    x = *result;
     double endTime = clock();
 
     double totalTimec = (endTime-starting)/CLOCKS_PER_SEC;
