@@ -14,9 +14,9 @@ int main (int argc, char **argv) {
   unsigned int Nints;
 
   //get the secret key from the user
-  printf("Enter the secret key (0 if unknown): "); fflush(stdout);
-  char stat = scanf("%u",&x);
-
+  //printf("Enter the secret key (0 if unknown): "); fflush(stdout);
+ // char stat = scanf("%u",&x);
+  x = 0;
   printf("Reading file.\n");
 
   /* Q3 Complete this function. Read in the public key data from public_key.txt
@@ -49,14 +49,20 @@ int main (int argc, char **argv) {
   } 
 
   // find the secret key
+  if (modExp(g,x,p)!=h){
+	x = 0;
+  }
   if (x==0 || modExp(g,x,p)!=h) {
     printf("Finding the secret key...\n");
     double startTime = clock();
-    #pragma omp parallel for 
+    #pragma omp parallel for shared(x) 
     for (unsigned int i=0;i<p-1;i++) {
-      if (modExp(g,i+1,p)==h) {
-        printf("Secret key found! x = %u \n", i+1);
-        x=i+1;
+      if (x!=0 || modExp(g,i+1,p)==h) {
+        //printf("Secret key found! x = %u \n", i+1);
+        if (x==0) {
+		printf("Secret key found! x = %u \n", i+1);
+		x=i+1;
+	}
       } 
     }
     double endTime = clock();

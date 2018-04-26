@@ -39,9 +39,11 @@ __global__ void findTheX(volatile unsigned int *xres, unsigned int p, unsigned i
 	int Nblock = blockDim.x;  //number of threads in a block
 	
 	unsigned int id = threadid + blockid*Nblock;
-	printf("hello from id %u \n", id);
+	xres[id+1] = 0;
+	//printf("hello from id %u w result %u \n", id,*xres);
 	if ((id < p) && modExpCuda(g,id+1,p)==h) {
-		*xres = id+1;
+		xres[id+1] = id+1;
+		printf("found it!! %d %d %d\n", id+1,xres[id+1],xres[id]);
 		// bug: xres is getting set to number of blocks always 
 		//__syncthreads();
 	}
@@ -57,15 +59,15 @@ int main (int argc, char **argv) {
   unsigned int Nints;
 
   //get the secret key from the user
-  printf("Enter the secret key (0 if unknown): "); fflush(stdout);
-  char stat = scanf("%u",&x);
-
+ //printf("Enter the secret key (0 if unknown): "); fflush(stdout);
+ // char stat = scanf("%u",&x);
+  x = 0;
   printf("Reading file.\n");
 
   /* Q3 Complete this function. Read in the public key data from public_key.txt
     and the cyphertexts from messages.txt. */
   FILE * key; 
-  key = fopen("public_key.txt", "r");
+  key = fopen("bonus_public_key.txt", "r");
   char * currLine = NULL; size_t length = 0;
   getline(&currLine, &length, key);
   n = atoi(currLine); currLine = NULL;
@@ -77,7 +79,7 @@ int main (int argc, char **argv) {
   h = atoi(currLine); fclose(key); 
 
   FILE * messge;
-  messge = fopen("message.txt", "r");
+  messge = fopen("bonus_message.txt", "r");
   currLine = NULL; length = 0;
   getline(&currLine, &length, key);
   int numEnt = atoi(currLine); currLine = NULL;
@@ -113,8 +115,9 @@ int main (int argc, char **argv) {
     
     double starting = clock();
     unsigned int *x_res;
-    cudaMalloc(&x_res, 1*sizeof(unsigned int));
-    cudaMemcpy(x_res, 0, 1 * sizeof(unsigned int), cudaMemcpyHostToDevice);
+    cudaMalloc(&x_res, (p-1)*sizeof(unsigned int));
+    //cudaMemcpy(x_res, 0, 1 * sizeof(unsigned int), cudaMemcpyHostToDevice);
+    //printf("hello\n");
     // the number of blocks we have corresponds to independent
     // executions in parallel - our design, we are skipping forward
     // by multiples so that 
@@ -124,14 +127,24 @@ int main (int argc, char **argv) {
     int Nthreads = 128;
     int Nblocks = (p + Nthreads - 1) / Nthreads;
     // p, g, and h are just constants
-    printf("prevals: %d, %d, %d\n", *x_res, p, h); 
+    //printf("prevals: %d, %d, %d\n", *x_res, p, h); 
+    printf("hello\n");
     findTheX <<<Nblocks, Nthreads>>> (x_res, p, h, g);
     cudaDeviceSynchronize();
     // Hopefully by this point we've found the x 
-    unsigned int *result;
-    cudaMemcpy(result, x_res, 1*sizeof(unsigned int), cudaMemcpyDeviceToHost);
-    printf("We found the secret key as %d\n", result);
-    x = *result;
+    unsigned int *result = (unsigned int*) malloc((p-1)*sizeof(unsigned int));
+    cudaMemcpy(result, x_res, (p-1)*sizeof(unsigned int), cudaMemcpyDeviceToHost);
+    int ctr = 0;
+    while (ctr < p) {
+	//printf("searchin'\n");
+	if (result[ctr] != 0) {
+		x = result[ctr];
+		break;
+	}
+	ctr++;
+    }
+    printf("We found the secret key as %d\n", x);//result);
+    //x = *result;
     double endTime = clock();
 
     double totalTimec = (endTime-starting)/CLOCKS_PER_SEC;
